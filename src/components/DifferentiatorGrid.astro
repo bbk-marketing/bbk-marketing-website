@@ -1,0 +1,51 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import { differentiators } from '../data/differentiators';
+
+const icons: Record<string, string> = {
+  focus: '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/>',
+  shield: '<path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/>',
+  globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 4 5.8 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.8-4-9s1.5-6.5 4-9z"/>',
+  message: '<path d="M4 5h16v11H8l-4 4V5z"/>',
+  sites: '<circle cx="6" cy="7" r="2.4"/><circle cx="18" cy="7" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M8.1 8.4 10.5 16M15.9 8.4 13.5 16M8.4 7h7.2"/>',
+  growth: '<path d="M4 19h16M6 15l4-5 3 3 5-7"/>',
+};
+---
+
+<section class="why section" id="why-bbk">
+  <div class="container">
+    <SectionHeader
+      eyebrow="Why BBK"
+      title="We Understand the Difference Between Marketing and Clinical Research Marketing."
+      center
+    />
+    <div class="why-grid">
+      {differentiators.map((d, i) => (
+        <div class="why-card" data-reveal data-reveal-delay={String((i % 4) + 1)}>
+          <div class="why-icon" set:html={`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">${icons[d.icon]}</svg>`} />
+          <h3>{d.title}</h3>
+          <p>{d.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media (max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.why-grid{grid-template-columns:1fr}}
+
+  .why-card{
+    background:var(--white);border:1px solid var(--border-subtle);border-radius:var(--radius-md);
+    padding:30px 26px;transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+  }
+  .why-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:transparent}
+  .why-icon{
+    width:46px;height:46px;border-radius:12px;background:var(--royal-100);
+    display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--accent-strong);
+  }
+  .why-icon svg{width:22px;height:22px}
+  .why-card h3{font-size:1.06rem;margin-bottom:8px}
+  .why-card p{font-size:.92rem;line-height:1.6}
+</style>

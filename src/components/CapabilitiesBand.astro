@@ -1,0 +1,20 @@
+---
+import { capabilities } from '../data/capabilities';
+---
+
+<section class="capabilities-band" aria-label="Capabilities">
+  <div class="container caps-grid" data-reveal>
+    {capabilities.map((c) => <div class="cap-item">{c}</div>)}
+  </div>
+</section>
+
+<style>
+  .capabilities-band{background:var(--navy-900);padding:44px 0}
+  .caps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+  @media (max-width:720px){.caps-grid{grid-template-columns:repeat(2,1fr)}}
+  .cap-item{
+    font-family:var(--font-display);font-weight:700;font-size:1rem;color:var(--white);
+    border-left:2px solid var(--cyan-400);padding:6px 0 6px 16px;text-align:left;
+  }
+  @media (max-width:720px){.cap-item{text-align:center;border-left:none;border-top:2px solid var(--cyan-400);padding:12px 0 0}}
+</style>

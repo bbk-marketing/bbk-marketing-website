@@ -1,0 +1,65 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import { sampleSites } from '../data/multiSite';
+---
+
+<section class="multi-site section" id="multi-site">
+  <div class="container multi-grid">
+    <div data-reveal>
+      <SectionHeader
+        eyebrow="Multi-Site Recruitment"
+        title="One Recruitment Strategy. Multiple Research Sites."
+      />
+      <p class="body">
+        BBK can support centralized recruitment campaigns across multiple participating Sites while
+        tracking performance by geography and location — centralized campaign management, geographic
+        recruitment, Site-level performance, and a scalable multi-location strategy.
+      </p>
+      <a href="#contact" class="btn btn-primary">Discuss a Multi-Site Campaign</a>
+    </div>
+
+    <div class="multi-visual" data-reveal data-reveal-delay="2">
+      <svg viewBox="0 0 380 340" class="multi-svg">
+        <path d="M190 170 L80 70" stroke="var(--gray-300)" stroke-width="1.5" stroke-dasharray="4 6"/>
+        <path d="M190 170 L300 70" stroke="var(--gray-300)" stroke-width="1.5" stroke-dasharray="4 6"/>
+        <path d="M190 170 L190 290" stroke="var(--gray-300)" stroke-width="1.5" stroke-dasharray="4 6"/>
+
+        <g transform="translate(140,148)">
+          <rect width="100" height="44" rx="12" class="study-chip"/>
+          <text x="50" y="27" text-anchor="middle" class="study-text">Study</text>
+        </g>
+
+        {sampleSites.map((s, i) => {
+          const positions = [
+            { x: 30, y: 46 },
+            { x: 250, y: 46 },
+            { x: 140, y: 268 },
+          ];
+          const pos = positions[i] ?? { x: 140, y: 268 };
+          return (
+            <g transform={`translate(${pos.x},${pos.y})`}>
+              <rect width="100" height="40" rx="10" class="site-chip"/>
+              <text x="50" y="25" text-anchor="middle" class="site-text">{s}</text>
+            </g>
+          );
+        })}
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+  .multi-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  @media (max-width:900px){.multi-grid{grid-template-columns:1fr}}
+  .multi-site .body{font-size:1.02rem;line-height:1.7;margin-bottom:28px;max-width:520px}
+
+  .multi-visual{
+    background:var(--bg-alt);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);
+    padding:20px;
+  }
+  .multi-svg{width:100%;height:auto}
+  .study-chip{fill:var(--navy-900)}
+  .study-text{fill:var(--white);font-family:var(--font-display);font-weight:700;font-size:14px}
+  .site-chip{fill:var(--white);stroke:var(--gray-300);stroke-width:1.3}
+  .site-text{fill:var(--text-primary);font-family:var(--font-body);font-weight:600;font-size:13px}
+</style>

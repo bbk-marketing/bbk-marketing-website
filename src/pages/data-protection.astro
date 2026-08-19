@@ -1,0 +1,99 @@
+---
+import LegalLayout from '../layouts/LegalLayout.astro';
+import { site } from '../data/site';
+---
+
+<LegalLayout
+  title="Data Protection & Healthcare Advertising Disclaimer"
+  description="Data Protection and Healthcare Advertising Disclaimer for BBK Marketing Solutions LLC."
+  effectiveDate="March 11, 2026"
+  updatedDate="March 11, 2026"
+>
+  <h2>1. Purpose</h2>
+  <p>
+    {site.legalName} (&ldquo;BBK Marketing&rdquo;, &ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;,
+    or &ldquo;our&rdquo;) provides digital advertising and marketing services to businesses, healthcare
+    organizations, and research institutions.
+  </p>
+  <p>
+    This statement clarifies the role of BBK Marketing in relation to healthcare-related advertising
+    campaigns and data protection practices.
+  </p>
+
+  <h2>2. Role of BBK Marketing Solutions</h2>
+  <p>BBK Marketing Solutions operates strictly as a digital marketing and advertising service provider.</p>
+  <p>Our services may include:</p>
+  <ul>
+    <li>Digital advertising campaign management</li>
+    <li>Audience targeting</li>
+    <li>Campaign optimization</li>
+    <li>Marketing analytics</li>
+  </ul>
+  <p>BBK Marketing does not collect, store, process, or manage medical records or protected health information (PHI).</p>
+
+  <h2>3. Data Collection Responsibility</h2>
+  <p>For healthcare and clinical research advertising campaigns:</p>
+  <ul>
+    <li>Lead forms</li>
+    <li>Landing pages</li>
+    <li>Patient intake forms</li>
+    <li>Research eligibility questionnaires</li>
+  </ul>
+  <p>are hosted and managed directly by the client organization, such as:</p>
+  <ul>
+    <li>Clinical research centers</li>
+    <li>Healthcare providers</li>
+    <li>Study sponsors</li>
+  </ul>
+  <p>Any personal or health-related information submitted by users is collected and controlled exclusively by the client organization.</p>
+
+  <h2>4. No Storage of Health Data</h2>
+  <p>{site.legalName}:</p>
+  <ul>
+    <li>Does not host patient intake forms</li>
+    <li>Does not store medical information</li>
+    <li>Does not maintain patient databases</li>
+    <li>Does not access protected health records</li>
+  </ul>
+  <p>All health-related data remains under the control of the healthcare organization responsible for the study or service.</p>
+
+  <h2>5. HIPAA Status</h2>
+  <p>{site.legalName} is not a healthcare provider and not a HIPAA-covered entity.</p>
+  <p>
+    Because BBK Marketing does not access or store Protected Health Information (PHI), the company does
+    not operate as a HIPAA Business Associate.
+  </p>
+  <p>
+    Healthcare organizations using our advertising services remain responsible for ensuring HIPAA
+    compliance within their own systems and platforms.
+  </p>
+
+  <h2>6. Advertising Platforms</h2>
+  <p>Campaigns may be delivered through third-party platforms such as:</p>
+  <ul>
+    <li>Meta (Facebook &amp; Instagram)</li>
+    <li>Google Ads</li>
+    <li>TikTok Ads</li>
+    <li>Other digital advertising networks</li>
+  </ul>
+  <p>BBK Marketing does not control how these platforms manage user data beyond standard advertising configurations.</p>
+  <p>Users are encouraged to review the privacy policies of those platforms.</p>
+
+  <h2>7. Client Compliance Responsibility</h2>
+  <p>Clients engaging BBK Marketing Solutions for healthcare advertising campaigns are responsible for:</p>
+  <ul>
+    <li>Ensuring compliance with HIPAA and healthcare privacy regulations</li>
+    <li>Maintaining secure patient intake systems</li>
+    <li>Obtaining any required Institutional Review Board (IRB) approvals for research recruitment advertising</li>
+  </ul>
+  <p>BBK Marketing does not participate in clinical screening, patient enrollment, or medical decision-making.</p>
+
+  <h2>8. Contact Information</h2>
+  <p>For questions regarding this statement, please contact:</p>
+  <p>
+    {site.legalName}<br />
+    {site.address}<br />
+    Email: <a href={`mailto:${site.privacyEmail}`}>{site.privacyEmail}</a><br />
+    Phone: <a href={`tel:${site.privacyPhoneHref}`}>{site.privacyPhoneDisplay}</a>
+  </p>
+</LegalLayout>

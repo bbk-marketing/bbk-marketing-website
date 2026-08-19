@@ -1,0 +1,315 @@
+<div class="a11y-widget">
+  <button
+    type="button"
+    class="a11y-toggle"
+    id="a11yToggle"
+    aria-haspopup="true"
+    aria-expanded="false"
+    aria-controls="a11yPanel"
+    aria-label="Accessibility options"
+  >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="7.5" r="1.4" fill="currentColor" stroke="none" />
+      <path d="M6.5 10.5c3.6 1.2 7.4 1.2 11 0M12 10.5V17M9.5 20l2.5-4 2.5 4" />
+    </svg>
+  </button>
+
+  <div class="a11y-panel" id="a11yPanel" role="dialog" aria-label="Accessibility options" hidden>
+    <div class="a11y-row">
+      <span class="a11y-label">Text size</span>
+      <div class="a11y-btn-group">
+        <button type="button" id="a11yTextDown" aria-label="Decrease text size">A&minus;</button>
+        <button type="button" id="a11yTextReset" aria-label="Reset text size">A</button>
+        <button type="button" id="a11yTextUp" aria-label="Increase text size">A&plus;</button>
+      </div>
+    </div>
+
+    <label class="a11y-row a11y-switch-row">
+      <span class="a11y-label">High contrast</span>
+      <span class="a11y-switch">
+        <input type="checkbox" id="a11yContrast" />
+        <span class="a11y-switch-track"><span class="a11y-switch-thumb"></span></span>
+      </span>
+    </label>
+
+    <label class="a11y-row a11y-switch-row">
+      <span class="a11y-label">Reduce motion</span>
+      <span class="a11y-switch">
+        <input type="checkbox" id="a11yMotion" />
+        <span class="a11y-switch-track"><span class="a11y-switch-thumb"></span></span>
+      </span>
+    </label>
+
+    <label class="a11y-row a11y-switch-row">
+      <span class="a11y-label">Underline links</span>
+      <span class="a11y-switch">
+        <input type="checkbox" id="a11yUnderline" />
+        <span class="a11y-switch-track"><span class="a11y-switch-thumb"></span></span>
+      </span>
+    </label>
+
+    <button type="button" class="a11y-reset-all" id="a11yResetAll">Reset all</button>
+  </div>
+</div>
+
+<style>
+  .a11y-widget {
+    position: fixed;
+    bottom: 26px;
+    left: 26px;
+    z-index: 900;
+  }
+
+  .a11y-toggle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--navy-900);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.25s var(--ease), background-color 0.25s var(--ease);
+  }
+  .a11y-toggle:hover {
+    transform: scale(1.06);
+    background: var(--royal-600);
+  }
+  .a11y-toggle svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .a11y-panel {
+    position: absolute;
+    bottom: 66px;
+    left: 0;
+    width: 260px;
+    background: var(--white);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .a11y-panel[hidden] {
+    display: none;
+  }
+
+  .a11y-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .a11y-label {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .a11y-btn-group {
+    display: flex;
+    gap: 6px;
+  }
+  .a11y-btn-group button {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-300);
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--text-primary);
+    transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+  }
+  .a11y-btn-group button:hover {
+    border-color: var(--accent);
+    color: var(--accent-strong);
+  }
+
+  .a11y-switch-row {
+    cursor: pointer;
+  }
+  .a11y-switch {
+    position: relative;
+    display: inline-flex;
+  }
+  .a11y-switch input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+  }
+  .a11y-switch-track {
+    width: 38px;
+    height: 22px;
+    border-radius: 999px;
+    background: var(--gray-300);
+    display: block;
+    position: relative;
+    transition: background-color 0.2s var(--ease);
+  }
+  .a11y-switch-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--white);
+    transition: transform 0.2s var(--ease);
+  }
+  .a11y-switch input:checked + .a11y-switch-track {
+    background: var(--accent);
+  }
+  .a11y-switch input:checked + .a11y-switch-track .a11y-switch-thumb {
+    transform: translateX(16px);
+  }
+  .a11y-switch input:focus-visible + .a11y-switch-track {
+    outline: 2.5px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .a11y-reset-all {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gray-500);
+    padding-top: 6px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .a11y-reset-all:hover {
+    color: var(--accent-strong);
+  }
+
+  @media (max-width: 480px) {
+    .a11y-widget {
+      left: 16px;
+      bottom: 16px;
+    }
+    .a11y-panel {
+      width: 230px;
+    }
+  }
+</style>
+
+<script>
+  const STORAGE_KEY = 'bbk_a11y_prefs';
+
+  type A11yPrefs = {
+    textScale: number;
+    contrast: boolean;
+    motion: boolean;
+    underline: boolean;
+  };
+
+  const defaults: A11yPrefs = { textScale: 100, contrast: false, motion: false, underline: false };
+
+  function loadPrefs(): A11yPrefs {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return { ...defaults };
+      return { ...defaults, ...JSON.parse(raw) };
+    } catch {
+      return { ...defaults };
+    }
+  }
+
+  function savePrefs(prefs: A11yPrefs) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
+    } catch {
+      /* ignore storage errors (private browsing, etc.) */
+    }
+  }
+
+  function apply(prefs: A11yPrefs) {
+    document.documentElement.style.fontSize = prefs.textScale + '%';
+    document.documentElement.classList.toggle('a11y-contrast', prefs.contrast);
+    document.documentElement.classList.toggle('a11y-reduced-motion', prefs.motion);
+    document.documentElement.classList.toggle('a11y-underline-links', prefs.underline);
+
+    const contrastInput = document.getElementById('a11yContrast') as HTMLInputElement | null;
+    const motionInput = document.getElementById('a11yMotion') as HTMLInputElement | null;
+    const underlineInput = document.getElementById('a11yUnderline') as HTMLInputElement | null;
+    if (contrastInput) contrastInput.checked = prefs.contrast;
+    if (motionInput) motionInput.checked = prefs.motion;
+    if (underlineInput) underlineInput.checked = prefs.underline;
+  }
+
+  let prefs = loadPrefs();
+  apply(prefs);
+
+  const toggle = document.getElementById('a11yToggle');
+  const panel = document.getElementById('a11yPanel');
+
+  const openPanel = () => {
+    panel?.removeAttribute('hidden');
+    toggle?.setAttribute('aria-expanded', 'true');
+  };
+  const closePanel = () => {
+    panel?.setAttribute('hidden', '');
+    toggle?.setAttribute('aria-expanded', 'false');
+  };
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    isOpen ? closePanel() : openPanel();
+  });
+
+  document.addEventListener('click', (e) => {
+    const target = e.target as Node;
+    if (!panel || panel.hasAttribute('hidden')) return;
+    if (panel.contains(target) || toggle?.contains(target)) return;
+    closePanel();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closePanel();
+      (toggle as HTMLElement | null)?.focus();
+    }
+  });
+
+  document.getElementById('a11yTextUp')?.addEventListener('click', () => {
+    prefs = { ...prefs, textScale: Math.min(prefs.textScale + 12, 150) };
+    apply(prefs);
+    savePrefs(prefs);
+  });
+  document.getElementById('a11yTextDown')?.addEventListener('click', () => {
+    prefs = { ...prefs, textScale: Math.max(prefs.textScale - 12, 87) };
+    apply(prefs);
+    savePrefs(prefs);
+  });
+  document.getElementById('a11yTextReset')?.addEventListener('click', () => {
+    prefs = { ...prefs, textScale: 100 };
+    apply(prefs);
+    savePrefs(prefs);
+  });
+  document.getElementById('a11yContrast')?.addEventListener('change', (e) => {
+    prefs = { ...prefs, contrast: (e.target as HTMLInputElement).checked };
+    apply(prefs);
+    savePrefs(prefs);
+  });
+  document.getElementById('a11yMotion')?.addEventListener('change', (e) => {
+    prefs = { ...prefs, motion: (e.target as HTMLInputElement).checked };
+    apply(prefs);
+    savePrefs(prefs);
+  });
+  document.getElementById('a11yUnderline')?.addEventListener('change', (e) => {
+    prefs = { ...prefs, underline: (e.target as HTMLInputElement).checked };
+    apply(prefs);
+    savePrefs(prefs);
+  });
+  document.getElementById('a11yResetAll')?.addEventListener('click', () => {
+    prefs = { ...defaults };
+    apply(prefs);
+    savePrefs(prefs);
+  });
+</script>

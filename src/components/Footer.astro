@@ -1,0 +1,96 @@
+---
+import { site } from '../data/site';
+import { navItems } from '../data/nav';
+---
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="/img/logo-glow.png" alt={site.name} width="220" height="104" />
+      <p>{site.tagline}</p>
+      <div class="social-row">
+        <a href={site.social.facebook} target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href={site.social.instagram} target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h5>Navigation</h5>
+      <ul>
+        {navItems.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+        <li><a href={`tel:${site.phoneHref}`}>{site.phoneDisplay}</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-participant">
+      <h5>Looking for a Clinical Research Study?</h5>
+      <p>This is BBK's corporate marketing site — not the participant recruitment portal.</p>
+      <a href={site.rps.url} target="_blank" rel="noopener" class="footer-rps-link">Visit {site.rps.shortName} →</a>
+    </div>
+  </div>
+
+  <div class="container footer-legal">
+    <p class="ecosystem-note">
+      {site.rps.shortName} is operated by {site.rps.legalName} and provides specialized
+      participant-recruitment services separately from {site.legalName}.
+    </p>
+    <div class="footer-bottom">
+      <span>© {new Date().getFullYear()} {site.legalName}. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="/terms-and-conditions" target="_blank" rel="noopener">Terms &amp; Conditions</a>
+        <a href="/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+        <a href="/data-protection" target="_blank" rel="noopener">Data Protection</a>
+        <a href="/cookie-policy" target="_blank" rel="noopener">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer{background:var(--navy-950);color:var(--gray-300);padding:var(--space-8) 0 var(--space-5)}
+  .footer-grid{
+    display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:40px;
+    padding-bottom:var(--space-7);border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  @media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.footer-grid{grid-template-columns:1fr}}
+
+  .footer-brand img{height:46px;width:auto;margin-bottom:16px}
+  .footer-brand p{font-size:.88rem;color:var(--gray-500);max-width:260px;margin-bottom:18px}
+  .social-row{display:flex;gap:10px}
+  .social-row a{
+    width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.06);
+    display:flex;align-items:center;justify-content:center;transition:background-color .2s var(--ease);
+  }
+  .social-row a:hover{background:var(--accent)}
+  .social-row svg{width:17px;height:17px;color:var(--gray-300)}
+
+  .footer-col h5{
+    font-family:var(--font-body);font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--gray-500);margin-bottom:16px;font-weight:700;
+  }
+  .footer-col ul{display:flex;flex-direction:column;gap:11px}
+  .footer-col a{font-size:.9rem;color:var(--gray-300);transition:color .2s var(--ease)}
+  .footer-col a:hover{color:var(--cyan-300)}
+
+  .footer-participant p{font-size:.84rem;color:var(--gray-500);margin-bottom:10px;line-height:1.6}
+  .footer-rps-link{color:var(--cyan-300);font-weight:600;font-size:.88rem}
+
+  .footer-legal{padding-top:var(--space-5)}
+  .ecosystem-note{font-size:.8rem;color:var(--gray-600);line-height:1.6;max-width:760px;margin-bottom:18px}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.8rem;color:var(--gray-600)}
+  .legal-links{display:flex;gap:18px;flex-wrap:wrap}
+  .legal-links a{color:var(--gray-600)}
+  .legal-links a:hover{color:var(--gray-300)}
+</style>

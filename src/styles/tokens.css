@@ -1,0 +1,83 @@
+/* =========================================================
+   BBK Marketing Solutions — Design Tokens
+   Clinical Research positioning: navy foundation, royal-blue
+   technology accent, cyan used sparingly. Mostly white/light-gray.
+   ========================================================= */
+
+:root{
+  /* --- Color: navy foundation --- */
+  --navy-950:#060b14;
+  --navy-900:#0a1628;
+  --navy-800:#0f2038;
+  --navy-700:#16304f;
+  --navy-600:#203f63;
+
+  /* --- Color: royal / electric blue (tech, CTA, links) --- */
+  --royal-600:#2547d0;
+  --royal-500:#3b63ff;
+  --royal-400:#5c7dff;
+  --royal-100:#e7ecff;
+
+  /* --- Color: cyan (sparse accent only) --- */
+  --cyan-400:#38d9f0;
+  --cyan-300:#7ce7f5;
+
+  /* --- Neutrals: cool-biased, not flat grey --- */
+  --white:#ffffff;
+  --gray-50:#f5f7fb;
+  --gray-100:#eaeef5;
+  --gray-300:#c7d0e0;
+  --gray-500:#8593ac;
+  --gray-600:#5b6b85;
+  --gray-800:#2b3a52;
+
+  /* --- Semantic tokens --- */
+  --bg-page:var(--white);
+  --bg-alt:var(--gray-50);
+  --bg-dark:var(--navy-900);
+  --bg-darker:var(--navy-950);
+  --text-primary:var(--navy-900);
+  --text-secondary:var(--gray-600);
+  --text-on-dark:var(--white);
+  --text-on-dark-muted:var(--gray-300);
+  --accent:var(--royal-500);
+  --accent-strong:var(--royal-600);
+  --accent-cyan:var(--cyan-400);
+  --border-subtle:var(--gray-100);
+  --border-on-dark:rgba(255,255,255,.12);
+
+  /* --- Typography --- */
+  --font-display:'Manrope', 'Segoe UI', sans-serif;
+  --font-body:'Inter', 'Segoe UI', sans-serif;
+
+  --fs-hero: clamp(2.1rem, 1.4rem + 3.2vw, 3.6rem);
+  --fs-h2: clamp(1.6rem, 1.25rem + 1.5vw, 2.4rem);
+  --fs-h3: clamp(1.15rem, 1.05rem + 0.4vw, 1.4rem);
+  --fs-lead: clamp(1.05rem, 1rem + 0.3vw, 1.2rem);
+  --fs-body: 1rem;
+  --fs-small: .875rem;
+  --fs-eyebrow: .78rem;
+
+  /* --- Spacing scale --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  --container: 1240px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --header-h: 80px;
+
+  --shadow-sm: 0 2px 12px rgba(10,22,40,.06);
+  --shadow-md: 0 14px 36px rgba(10,22,40,.10);
+  --shadow-lg: 0 28px 72px rgba(10,22,40,.16);
+
+  --ease: cubic-bezier(.22,.61,.36,1);
+}

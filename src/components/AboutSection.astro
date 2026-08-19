@@ -1,0 +1,34 @@
+---
+import SectionHeader from './SectionHeader.astro';
+---
+
+<section class="about section" id="about">
+  <div class="container about-grid">
+    <SectionHeader
+      eyebrow="About BBK"
+      title="Business Strategy Meets Clinical Research Marketing."
+    />
+    <div class="about-body" data-reveal data-reveal-delay="2">
+      <p>
+        BBK Marketing Solutions is a Florida-based business and marketing consulting company that
+        evolved toward specialization in Clinical Research after working directly with research
+        organizations and understanding the operational complexity behind participant recruitment.
+      </p>
+      <p class="philosophy">
+        "We learned quickly that clinical research organizations do not need another advertising
+        agency. They need partners who understand that recruitment is an operational process — not
+        simply a marketing metric."
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  @media (max-width:900px){.about-grid{grid-template-columns:1fr}}
+  .about-body p{font-size:1.02rem;line-height:1.75;margin-bottom:22px}
+  .philosophy{
+    font-family:var(--font-display);font-weight:600;font-size:1.12rem;color:var(--text-primary);
+    line-height:1.55;border-left:3px solid var(--accent);padding-left:20px;
+  }
+</style>

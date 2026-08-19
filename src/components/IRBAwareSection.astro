@@ -1,0 +1,35 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import { irbDeliverables } from '../data/irbDeliverables';
+---
+
+<section class="irb section section-alt" id="irb-aware">
+  <div class="container">
+    <SectionHeader
+      eyebrow="Regulatory-Aware Development"
+      title="Built With the Recruitment Review Process in Mind."
+      description="Recruitment campaigns in clinical research require more than attractive advertising. BBK develops campaign materials with study requirements, participant communication and the applicable review process in mind."
+      center
+    />
+    <div class="irb-tags" data-reveal>
+      {irbDeliverables.map((d) => <span class="tag">{d}</span>)}
+    </div>
+    <p class="irb-note">
+      BBK creates materials. The client and its applicable research organization handle submission
+      and required approval.
+    </p>
+  </div>
+</section>
+
+<style>
+  .irb-tags{
+    display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:22px;
+  }
+  .tag{
+    background:var(--white);border:1px solid var(--border-subtle);border-radius:999px;
+    padding:10px 20px;font-size:.88rem;font-weight:600;color:var(--text-primary);
+  }
+  .irb-note{
+    text-align:center;font-size:.86rem;color:var(--gray-500);max-width:560px;margin-inline:auto;
+  }
+</style>

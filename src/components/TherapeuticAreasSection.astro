@@ -1,0 +1,25 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import { therapeuticAreas } from '../data/therapeuticAreas';
+---
+
+<section class="therapeutic section section-alt" id="therapeutic-areas">
+  <div class="container">
+    <SectionHeader
+      eyebrow="Experience"
+      title="Recruitment Campaign Experience Across Multiple Therapeutic Areas"
+      center
+    />
+    <div class="ta-tags" data-reveal>
+      {therapeuticAreas.map((t) => <span class="ta-tag">{t}</span>)}
+    </div>
+  </div>
+</section>
+
+<style>
+  .ta-tags{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .ta-tag{
+    background:var(--white);border:1px solid var(--border-subtle);border-radius:var(--radius-sm);
+    padding:12px 22px;font-weight:600;font-size:.9rem;color:var(--text-primary);
+  }
+</style>

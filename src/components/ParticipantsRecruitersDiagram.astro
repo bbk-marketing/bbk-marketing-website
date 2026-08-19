@@ -1,0 +1,69 @@
+---
+import { site } from '../data/site';
+
+const participantItems = [
+  'Secure registration',
+  'Study information',
+  'Pre-screening',
+  'Communication',
+  'Research opportunities',
+];
+const recruiterItems = [
+  'Campaign monitoring',
+  'Referral management',
+  'Site performance',
+  'Participant communication',
+  'Recruitment analytics',
+];
+---
+
+<div class="pr-diagram" data-reveal>
+  <div class="pr-col">
+    <h4 class="pr-col-title">Participants</h4>
+    <ul>
+      {participantItems.map((i) => <li>{i}</li>)}
+    </ul>
+  </div>
+
+  <div class="pr-hub">
+    <div class="hub-chip">{site.rps.shortName}</div>
+    <span class="hub-caption">Controlled Workflow</span>
+  </div>
+
+  <div class="pr-col">
+    <h4 class="pr-col-title">Recruiters</h4>
+    <ul>
+      {recruiterItems.map((i) => <li>{i}</li>)}
+    </ul>
+  </div>
+</div>
+
+<style>
+  .pr-diagram{
+    display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center;
+    padding:40px 32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);
+    border-radius:var(--radius-lg);
+  }
+  @media (max-width:820px){
+    .pr-diagram{grid-template-columns:1fr;justify-items:center;text-align:center}
+    .pr-hub{order:-1}
+  }
+  .pr-col-title{
+    font-family:var(--font-display);font-size:1rem;color:var(--white);margin-bottom:14px;
+    text-align:center;
+  }
+  .pr-col ul{display:flex;flex-direction:column;gap:10px}
+  .pr-col li{
+    font-size:.86rem;color:var(--gray-300);background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-sm);
+    padding:10px 14px;text-align:center;
+  }
+  .pr-hub{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .hub-chip{
+    background:linear-gradient(135deg, var(--cyan-400), var(--royal-500));
+    color:var(--navy-950);font-family:var(--font-display);font-weight:800;font-size:.86rem;
+    padding:16px 22px;border-radius:var(--radius-md);box-shadow:0 14px 32px rgba(56,217,240,.22);
+    white-space:nowrap;
+  }
+  .hub-caption{font-size:.72rem;color:var(--gray-500);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+</style>

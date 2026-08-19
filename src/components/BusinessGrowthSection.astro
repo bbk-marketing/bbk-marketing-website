@@ -1,0 +1,48 @@
+---
+import SectionHeader from './SectionHeader.astro';
+
+const items = [
+  'Corporate presence',
+  'Positioning',
+  'Digital infrastructure',
+  'Marketing systems',
+  'Business development',
+  'Automation and scalability',
+];
+---
+
+<section class="growth section section-alt" id="business-growth">
+  <div class="container growth-grid">
+    <div data-reveal>
+      <SectionHeader
+        eyebrow="Beyond Recruitment"
+        title="Build a Stronger Research Business."
+      />
+      <p class="body">
+        BBK Marketing Solutions also helps research organizations improve the business behind the
+        campaigns — so growth doesn't stop at the next recruitment goal.
+      </p>
+      <a href="#contact" class="btn btn-outline">Discuss Business Growth</a>
+    </div>
+    <ul class="growth-list" data-reveal data-reveal-delay="2">
+      {items.map((i) => (
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>{i}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .growth-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  @media (max-width:900px){.growth-grid{grid-template-columns:1fr}}
+  .growth .body{font-size:1.02rem;line-height:1.7;margin-bottom:28px;max-width:520px}
+  .growth-list{
+    display:grid;grid-template-columns:1fr 1fr;gap:14px;
+    background:var(--white);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:28px;
+  }
+  .growth-list li{display:flex;align-items:flex-start;gap:10px;font-size:.92rem;font-weight:600}
+  .growth-list svg{width:16px;height:16px;color:var(--accent-strong);margin-top:3px;flex-shrink:0}
+</style>

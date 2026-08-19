@@ -1,0 +1,94 @@
+---
+import { heroFlow } from '../data/participantJourney';
+---
+
+<div class="flow-visual" role="img" aria-label="Diagram: Study leads to Campaign, to Participant, to Pre-Screening, to Research Site">
+  <svg viewBox="0 0 560 560" xmlns="http://www.w3.org/2000/svg" class="flow-svg">
+    <!-- ambient network field -->
+    <g class="dots" opacity="0.5">
+      {Array.from({ length: 26 }).map((_, i) => {
+        const x = 20 + ((i * 137) % 520);
+        const y = 20 + ((i * 71) % 520);
+        return <circle cx={x} cy={y} r="1.6" fill="var(--cyan-400)" opacity={0.15 + (i % 5) * 0.06} />;
+      })}
+    </g>
+
+    <!-- connecting flow path -->
+    <path
+      class="flow-path"
+      d="M 96 70 C 210 100, 230 170, 150 210 C 60 250, 70 320, 190 350 C 300 375, 270 440, 150 470"
+      fill="none"
+      stroke="url(#flowGrad)"
+      stroke-width="2.5"
+      stroke-linecap="round"
+    />
+    <defs>
+      <linearGradient id="flowGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="var(--cyan-400)" />
+        <stop offset="100%" stop-color="var(--royal-400)" />
+      </linearGradient>
+    </defs>
+
+    <!-- nodes -->
+    <g class="node" transform="translate(30,46)">
+      <circle cx="10" cy="18" r="5" fill="var(--cyan-400)" />
+      <rect x="26" y="0" width="150" height="36" rx="10" class="chip" />
+      <text x="101" y="23" text-anchor="middle" class="chip-text">{heroFlow[0]}</text>
+    </g>
+
+    <g class="node" transform="translate(150,152)">
+      <circle cx="10" cy="18" r="5" fill="var(--royal-400)" />
+      <rect x="26" y="0" width="164" height="36" rx="10" class="chip" />
+      <text x="108" y="23" text-anchor="middle" class="chip-text">{heroFlow[1]}</text>
+    </g>
+
+    <g class="node" transform="translate(20,192)">
+      <circle cx="10" cy="18" r="5" fill="var(--cyan-400)" />
+      <rect x="26" y="0" width="168" height="36" rx="10" class="chip" />
+      <text x="110" y="23" text-anchor="middle" class="chip-text">{heroFlow[2]}</text>
+    </g>
+
+    <g class="node" transform="translate(150,332)">
+      <circle cx="10" cy="18" r="5" fill="var(--royal-400)" />
+      <rect x="26" y="0" width="184" height="36" rx="10" class="chip" />
+      <text x="118" y="23" text-anchor="middle" class="chip-text">{heroFlow[3]}</text>
+    </g>
+
+    <g class="node" transform="translate(30,452)">
+      <circle cx="10" cy="18" r="5" fill="var(--cyan-400)" />
+      <rect x="26" y="0" width="178" height="36" rx="10" class="chip featured" />
+      <text x="115" y="23" text-anchor="middle" class="chip-text featured-text">{heroFlow[4]}</text>
+    </g>
+  </svg>
+</div>
+
+<style>
+  .flow-visual{
+    position:relative;width:100%;max-width:480px;margin-inline:auto;
+  }
+  .flow-svg{width:100%;height:auto;overflow:visible}
+  .chip{
+    fill:rgba(255,255,255,.05);
+    stroke:rgba(255,255,255,.16);
+    stroke-width:1;
+  }
+  .chip.featured{fill:rgba(56,217,240,.12);stroke:var(--cyan-400)}
+  .chip-text{
+    fill:var(--gray-300);
+    font-family:var(--font-body);font-size:13px;font-weight:600;
+    dominant-baseline:middle;
+  }
+  .featured-text{fill:var(--white)}
+  .flow-path{
+    stroke-dasharray:6 8;
+    animation:dash 14s linear infinite;
+  }
+  @keyframes dash{ to{ stroke-dashoffset:-280; } }
+  .dots circle{animation:twinkle 5s ease-in-out infinite}
+  @keyframes twinkle{ 50%{ opacity:.05; } }
+
+  @media (prefers-reduced-motion: reduce){
+    .flow-path{animation:none}
+    .dots circle{animation:none}
+  }
+</style>

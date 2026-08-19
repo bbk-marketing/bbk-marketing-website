@@ -1,0 +1,24 @@
+---
+import { site } from '../data/site';
+---
+
+<script define:vars={{ baseUrl: site.chatwoot.baseUrl, websiteToken: site.chatwoot.websiteToken }}>
+  window.chatwootSettings = {
+    position: 'right',
+    type: 'standard',
+    locale: 'en',
+  };
+  (function (d, t) {
+    var g = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    g.src = baseUrl + '/packs/js/sdk.js';
+    g.async = true;
+    s.parentNode.insertBefore(g, s);
+    g.onload = function () {
+      window.chatwootSDK.run({
+        websiteToken: websiteToken,
+        baseUrl: baseUrl,
+      });
+    };
+  })(document, 'script');
+</script>

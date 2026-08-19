@@ -1,0 +1,59 @@
+---
+import { primaryCta } from '../data/nav';
+import HeroFlowVisual from './HeroFlowVisual.astro';
+---
+
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div data-reveal>
+      <p class="credibility"><span class="dot"></span>Specialized in Clinical Research Marketing &amp; Business Growth</p>
+      <h1>Growth Starts With the Right Participants — and the Right Strategy.</h1>
+      <p class="lead">
+        BBK Marketing Solutions helps Clinical Research Sites, CROs and research organizations
+        strengthen their market presence, attract participants and create scalable growth through
+        specialized marketing, digital strategy and recruitment infrastructure.
+      </p>
+      <div class="hero-ctas">
+        <a href={primaryCta.href} class="btn btn-primary">{primaryCta.label}</a>
+        <a href="#patient-recruitment" class="btn btn-ghost-light">Explore BBK RPS</a>
+      </div>
+    </div>
+
+    <div data-reveal data-reveal-delay="2">
+      <HeroFlowVisual />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero{
+    position:relative;isolation:isolate;overflow:hidden;
+    padding-top:calc(var(--header-h) + 88px);
+    padding-bottom:96px;
+    background:var(--navy-900);
+    color:var(--white);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:-2;
+    background:
+      radial-gradient(circle at 12% 15%, rgba(56,217,240,.13), transparent 45%),
+      radial-gradient(circle at 88% 80%, rgba(59,99,255,.16), transparent 50%),
+      linear-gradient(180deg, var(--navy-950) 0%, var(--navy-900) 55%, var(--navy-800) 100%);
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;
+  }
+  @media (max-width:960px){.hero-grid{grid-template-columns:1fr}}
+
+  .credibility{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:.82rem;font-weight:600;color:var(--gray-300);
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);
+    padding:8px 16px;border-radius:var(--radius-sm);margin-bottom:26px;
+  }
+  .credibility .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan-400);box-shadow:0 0 0 4px rgba(56,217,240,.18)}
+
+  .hero h1{font-size:var(--fs-hero);margin-bottom:22px}
+  .hero .lead{font-size:var(--fs-lead);line-height:1.7;color:var(--gray-300);max-width:560px;margin-bottom:38px}
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+</style>

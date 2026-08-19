@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Page Not Found | BBK Marketing Solutions" description="The page you're looking for could not be found.">
+  <section class="section not-found">
+    <div class="container">
+      <p class="eyebrow">404</p>
+      <h1>Page Not Found</h1>
+      <p>The page you're looking for doesn't exist or has moved.</p>
+      <a href="/" class="btn btn-primary">Back to Home</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .not-found{padding-top:calc(var(--header-h) + 80px);text-align:center;min-height:60vh}
+  .not-found h1{font-size:var(--fs-h2);margin-bottom:14px}
+  .not-found p{margin-bottom:28px}
+  .not-found .eyebrow{justify-content:center}
+</style>

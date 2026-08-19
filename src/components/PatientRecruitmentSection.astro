@@ -1,0 +1,36 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import ParticipantJourneyDiagram from './ParticipantJourneyDiagram.astro';
+import ParticipantsRecruitersDiagram from './ParticipantsRecruitersDiagram.astro';
+import { site } from '../data/site';
+---
+
+<section class="patient-recruitment section section-dark" id="patient-recruitment">
+  <div class="container">
+    <SectionHeader
+      eyebrow={site.rps.shortName}
+      title="A Recruitment Infrastructure Built Around the Participant Journey."
+      center
+    />
+
+    <ParticipantJourneyDiagram />
+
+    <p class="journey-note">
+      {site.rps.shortName} is designed to help research organizations move from advertising responses
+      toward more organized participant recruitment workflows — while keeping final screening and
+      clinical eligibility decisions with the Research Site.
+    </p>
+
+    <div class="pr-spacer">
+      <ParticipantsRecruitersDiagram />
+    </div>
+  </div>
+</section>
+
+<style>
+  .journey-note{
+    max-width:720px;margin:28px auto 0;text-align:center;
+    font-size:.98rem;line-height:1.7;
+  }
+  .pr-spacer{margin-top:var(--space-7)}
+</style>

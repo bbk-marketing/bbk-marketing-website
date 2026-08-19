@@ -1,0 +1,30 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import { whoWeServe } from '../data/whoWeServe';
+---
+
+<section class="who-we-serve section" id="who-we-serve">
+  <div class="container">
+    <SectionHeader eyebrow="Who We Serve" title="Built to Work Across the Research Ecosystem" center />
+    <div class="wws-grid">
+      {whoWeServe.map((s, i) => (
+        <div class="wws-card" data-reveal data-reveal-delay={String(i + 1)}>
+          <h3>{s.title}</h3>
+          <p>{s.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .wws-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  @media (max-width:900px){.wws-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.wws-grid{grid-template-columns:1fr}}
+  .wws-card{
+    border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:26px 22px;
+    border-top:3px solid var(--accent);
+  }
+  .wws-card h3{font-size:1.02rem;margin-bottom:8px}
+  .wws-card p{font-size:.88rem;line-height:1.6}
+</style>

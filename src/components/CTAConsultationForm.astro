@@ -1,0 +1,168 @@
+---
+import { site } from '../data/site';
+
+const orgTypes = ['Research Site', 'CRO', 'SMO', 'Sponsor', 'Other'];
+const serviceInterests = [
+  'Clinical Research Marketing',
+  'Multi-Site Recruitment',
+  site.rps.shortName,
+  'Business Growth',
+  'Other',
+];
+---
+
+<section class="contact section section-dark" id="contact">
+  <div class="container contact-inner">
+    <div class="contact-head" data-reveal>
+      <div class="eyebrow">Request a Consultation</div>
+      <h2>Your Next Study Deserves More Than a Generic Marketing Campaign.</h2>
+      <p>
+        Talk with BBK about your Study, recruitment objectives, participating Sites and geographic
+        requirements.
+      </p>
+      <ul class="contact-details">
+        <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+        <li><a href={`tel:${site.phoneHref}`}>{site.phoneDisplay}</a></li>
+      </ul>
+    </div>
+
+    <form class="contact-form" id="consultForm" data-reveal data-reveal-delay="2">
+      <div class="form-row">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input id="name" type="text" name="name" required placeholder="Jane Smith" />
+        </div>
+        <div class="field">
+          <label for="company">Company</label>
+          <input id="company" type="text" name="company" required placeholder="Research Site / CRO / SMO name" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="email">Business Email</label>
+          <input id="email" type="email" name="email" required placeholder="you@organization.com" />
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" type="tel" name="phone" placeholder="+1 (555) 000-0000" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="orgType">Organization Type</label>
+          <select id="orgType" name="orgType">
+            {orgTypes.map((o) => <option>{o}</option>)}
+          </select>
+        </div>
+        <div class="field">
+          <label for="service">Service Interest</label>
+          <select id="service" name="service">
+            {serviceInterests.map((s) => <option>{s}</option>)}
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="study">Study / Therapeutic Area</label>
+          <input id="study" type="text" name="study" placeholder="e.g. Neurology" />
+        </div>
+        <div class="field">
+          <label for="sites">Number of Sites</label>
+          <input id="sites" type="text" name="sites" placeholder="e.g. 1, 3, 10+" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell us about your Study and recruitment goals..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-full">Request a Consultation</button>
+      <p class="form-note">
+        This form is for business inquiries only. Do not submit participant or medical information
+        through this form.
+      </p>
+      <div class="form-success" id="formSuccess">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        <span>Thank you. Your email client should now be open — we'll follow up shortly.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<style>
+  .contact-inner{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px}
+  @media (max-width:900px){.contact-inner{grid-template-columns:1fr}}
+
+  .contact-head h2{font-size:var(--fs-h2);margin-bottom:16px}
+  .contact-head p{font-size:1.02rem;line-height:1.7;margin-bottom:28px;max-width:440px}
+  .contact-details{display:flex;flex-direction:column;gap:12px}
+  .contact-details a{font-weight:600;color:var(--white);font-size:.98rem}
+  .contact-details a:hover{color:var(--cyan-300)}
+
+  .contact-form{
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);
+    border-radius:var(--radius-lg);padding:36px;
+  }
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+  @media (max-width:540px){.form-row{grid-template-columns:1fr}}
+  .field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+  .field label{font-size:.8rem;font-weight:600;color:var(--gray-300)}
+  .field input,.field select,.field textarea{
+    padding:13px 15px;border-radius:10px;border:1.5px solid rgba(255,255,255,.16);
+    background:rgba(255,255,255,.03);color:var(--white);font-size:.92rem;
+    transition:border-color .2s var(--ease), box-shadow .2s var(--ease);
+  }
+  .field select{color-scheme:dark}
+  .field input::placeholder,.field textarea::placeholder{color:var(--gray-500)}
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;border-color:var(--cyan-400);box-shadow:0 0 0 4px rgba(56,217,240,.12);
+  }
+  .field textarea{min-height:100px;resize:vertical}
+  .btn-full{width:100%}
+  .form-note{font-size:.76rem;color:var(--gray-500);margin-top:14px;line-height:1.5}
+  .form-success{
+    display:none;align-items:center;gap:12px;margin-top:16px;padding:14px 16px;border-radius:10px;
+    background:rgba(56,217,240,.1);color:var(--cyan-300);font-size:.86rem;font-weight:600;
+  }
+  .form-success.show{display:flex}
+  .form-success svg{width:18px;height:18px;flex-shrink:0}
+</style>
+
+<script>
+  const form = document.getElementById('consultForm') as HTMLFormElement | null;
+  const success = document.getElementById('formSuccess');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const get = (k: string) => (data.get(k) || '').toString();
+
+    const lines = [
+      `Name: ${get('name')}`,
+      `Company: ${get('company')}`,
+      `Email: ${get('email')}`,
+      get('phone') ? `Phone: ${get('phone')}` : null,
+      `Organization Type: ${get('orgType')}`,
+      `Service Interest: ${get('service')}`,
+      get('study') ? `Study / Therapeutic Area: ${get('study')}` : null,
+      get('sites') ? `Number of Sites: ${get('sites')}` : null,
+      '',
+      get('message'),
+    ]
+      .filter(Boolean)
+      .join('\n');
+
+    const mailto = `mailto:sales@bbk-marketing.com?subject=${encodeURIComponent(
+      'Consultation Request — ' + get('name')
+    )}&body=${encodeURIComponent(lines)}`;
+    window.location.href = mailto;
+
+    success?.classList.add('show');
+    form.reset();
+    setTimeout(() => success?.classList.remove('show'), 7000);
+  });
+</script>

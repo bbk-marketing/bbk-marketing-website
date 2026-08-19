@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist_extract/
+.astro/
+.env
+.DS_Store
+
+# Self-contained single-file builds used only for Claude Artifact previews —
+# not part of the deployable site (see build_preview.pl).
+preview*.html
