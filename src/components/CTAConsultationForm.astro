@@ -80,6 +80,17 @@ const serviceInterests = [
         <textarea id="message" name="message" placeholder="Tell us about your Study and recruitment goals..."></textarea>
       </div>
 
+      <label class="consent-field">
+        <input id="smsConsent" type="checkbox" name="smsConsent" required />
+        <span>
+          By checking this box and submitting this form, you consent to receive transactional
+          calls and text messages regarding your consultation request from {site.legalName}. Reply
+          STOP to opt out. Reply HELP for help. Standard message and data rates may apply. Message
+          frequency may vary. View our <a href="/terms-and-conditions" target="_blank" rel="noopener">Terms &amp; Conditions</a> and
+          <a href="/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>.
+        </span>
+      </label>
+
       <button type="submit" class="btn btn-primary btn-full">Request a Consultation</button>
       <p class="form-note">
         This form is for business inquiries only. Do not submit participant or medical information
@@ -122,6 +133,31 @@ const serviceInterests = [
     outline:none;border-color:var(--cyan-400);box-shadow:0 0 0 4px rgba(56,217,240,.12);
   }
   .field textarea{min-height:100px;resize:vertical}
+
+  .consent-field{
+    display:flex;align-items:flex-start;gap:12px;margin-bottom:22px;cursor:pointer;
+  }
+  .consent-field input[type="checkbox"]{
+    appearance:none;-webkit-appearance:none;flex-shrink:0;
+    width:19px;height:19px;margin-top:2px;border-radius:5px;
+    border:1.5px solid rgba(255,255,255,.32);background:rgba(255,255,255,.03);
+    cursor:pointer;position:relative;
+    transition:border-color .2s var(--ease), background-color .2s var(--ease);
+  }
+  .consent-field input[type="checkbox"]:checked{
+    background:var(--cyan-400);border-color:var(--cyan-400);
+  }
+  .consent-field input[type="checkbox"]:checked::after{
+    content:"";position:absolute;left:5px;top:1px;width:5px;height:9px;
+    border:solid var(--navy-950);border-width:0 2px 2px 0;transform:rotate(45deg);
+  }
+  .consent-field input[type="checkbox"]:focus-visible{
+    outline:2.5px solid var(--cyan-400);outline-offset:2px;
+  }
+  .consent-field span{font-size:.8rem;line-height:1.55;color:var(--gray-300)}
+  .consent-field a{color:var(--cyan-300);font-weight:600}
+  .consent-field a:hover{text-decoration:underline}
+
   .btn-full{width:100%}
   .form-note{font-size:.76rem;color:var(--gray-500);margin-top:14px;line-height:1.5}
   .form-success{
@@ -150,6 +186,7 @@ const serviceInterests = [
       `Service Interest: ${get('service')}`,
       get('study') ? `Study / Therapeutic Area: ${get('study')}` : null,
       get('sites') ? `Number of Sites: ${get('sites')}` : null,
+      `Consented to calls/SMS: ${(document.getElementById('smsConsent') as HTMLInputElement | null)?.checked ? 'Yes' : 'No'}`,
       '',
       get('message'),
     ]
