@@ -26,12 +26,13 @@ import { site } from '../data/site';
 
 <style>
   /*
-   * Fail-safe by default: the nav is solid and readable everywhere unless
-   * JS has confirmed it's actually running (html.js-reveal, set by the
-   * same script that drives scroll-reveal). Only then does it earn the
-   * transparent-over-hero look at the very top of the page — a broken or
-   * blocked script must never leave white nav text sitting on a white
-   * section.
+   * Fail-safe by default: the nav is solid and readable everywhere. It only
+   * earns the transparent-over-hero look at scroll-top when BOTH conditions
+   * hold: JS confirmed it's running (html.js-reveal) AND the page declared
+   * it actually has a dark hero behind the nav (data-transparent-nav="true",
+   * set via Layout's transparentNavAtTop prop — homepage only). Without the
+   * second check, a page with a light background at the top (blog, legal)
+   * would get white-on-white nav text the moment JS happened to run.
    */
   .nav{
     position:fixed;inset-inline:0;top:0;z-index:1000;
@@ -42,7 +43,7 @@ import { site } from '../data/site';
     box-shadow:var(--shadow-sm);
     transition:background-color .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease), height .3s var(--ease);
   }
-  :global(html.js-reveal) .nav:not(.is-scrolled){
+  :global(html.js-reveal[data-transparent-nav="true"]) .nav:not(.is-scrolled){
     height:var(--header-h);
     background:transparent;
     border-bottom-color:transparent;
@@ -56,7 +57,7 @@ import { site } from '../data/site';
     font-weight:600;font-size:.9rem;color:var(--text-primary);
     position:relative;padding:6px 0;transition:color .25s var(--ease);
   }
-  :global(html.js-reveal) .nav:not(.is-scrolled) .nav-links a{color:var(--text-on-dark)}
+  :global(html.js-reveal[data-transparent-nav="true"]) .nav:not(.is-scrolled) .nav-links a{color:var(--text-on-dark)}
   .nav-links a::after{
     content:"";position:absolute;left:0;bottom:0;width:0;height:2px;
     background:var(--accent);transition:width .25s var(--ease);border-radius:2px;
@@ -68,7 +69,7 @@ import { site } from '../data/site';
   .nav-toggle span{
     height:2px;background:var(--text-primary);border-radius:2px;transition:all .25s var(--ease);
   }
-  :global(html.js-reveal) .nav:not(.is-scrolled) .nav-toggle span{background:var(--text-on-dark)}
+  :global(html.js-reveal[data-transparent-nav="true"]) .nav:not(.is-scrolled) .nav-toggle span{background:var(--text-on-dark)}
 
   @media (max-width:960px){
     .nav-links{

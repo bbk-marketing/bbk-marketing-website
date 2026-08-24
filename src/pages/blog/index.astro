@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import BlogCard from '../../components/BlogCard.astro';
+
+const allPosts = await getCollection('blog', ({ data }) => {
+  return !data.draft && data.publishDate <= new Date();
+});
+const posts = allPosts.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+const [featuredPost, ...restPosts] = posts;
+---
+
+<Layout
+  title="Blog | BBK Marketing Solutions"
+  description="Insights on clinical research marketing, participant recruitment and business growth for Research Sites, CROs, SMOs and Sponsors."
+>
+  <section class="blog-hero section">
+    <div class="container">
+      <SectionHeader
+        eyebrow="Blog"
+        title="Insights for Clinical Research Marketing &amp; Growth"
+        description="Practical guidance on participant recruitment, multi-site campaigns and business growth for Research Sites, CROs, SMOs and Sponsors."
+      />
+    </div>
+  </section>
+
+  <section class="blog-list section section-alt">
+    <div class="container">
+      {posts.length === 0 && (
+        <p class="empty-state">New articles are on the way — check back soon.</p>
+      )}
+
+      {featuredPost && (
+        <BlogCard post={featuredPost} featured />
+      )}
+
+      {restPosts.length > 0 && (
+        <div class="blog-grid">
+          {restPosts.map((post) => <BlogCard post={post} />)}
+        </div>
+      )}
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .blog-hero{padding-top:calc(var(--header-h) + 64px);padding-bottom:24px}
+  .empty-state{color:var(--text-secondary);font-size:1.02rem}
+  .blog-list :global(.blog-card.featured){margin-bottom:28px}
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media (max-width:960px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:640px){.blog-grid{grid-template-columns:1fr}}
+</style>

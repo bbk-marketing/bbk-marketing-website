@@ -1,0 +1,106 @@
+---
+import Layout from './Layout.astro';
+import { site } from '../data/site';
+import { formatDate, estimateReadingTime } from '../utils/date';
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { title, description, publishDate, updatedDate, author, category } = post.data;
+const readingTime = estimateReadingTime(post.body);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  datePublished: publishDate.toISOString(),
+  dateModified: (updatedDate ?? publishDate).toISOString(),
+  author: { '@type': 'Organization', name: author },
+  publisher: {
+    '@type': 'Organization',
+    name: site.name,
+    logo: { '@type': 'ImageObject', url: `${site.url}/logo.png` },
+  },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': `${site.url}/blog/${post.slug}` },
+  articleSection: category,
+};
+---
+
+<Layout
+  title={`${title} | BBK Marketing Solutions Blog`}
+  description={description}
+  ogType="article"
+  publishedTime={publishDate.toISOString()}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="post section">
+    <div class="container post-container">
+      <a href="/blog" class="back-link">&larr; Back to Blog</a>
+      <p class="eyebrow">{category}</p>
+      <h1>{title}</h1>
+      <div class="post-meta">
+        <span>{author}</span>
+        <span aria-hidden="true">&middot;</span>
+        <time datetime={publishDate.toISOString()}>{formatDate(publishDate)}</time>
+        <span aria-hidden="true">&middot;</span>
+        <span>{readingTime} min read</span>
+      </div>
+      {updatedDate && (
+        <p class="post-updated">Updated {formatDate(updatedDate)}</p>
+      )}
+
+      <div class="post-body">
+        <slot />
+      </div>
+
+      <div class="post-cta">
+        <h3>Ready to talk about your Study?</h3>
+        <p>Talk with BBK about your recruitment objectives, participating Sites and geographic requirements.</p>
+        <a href="/#contact" class="btn btn-primary">Request a Consultation</a>
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .post{padding-top:calc(var(--header-h) + 64px)}
+  .post-container{max-width:760px}
+  .back-link{
+    display:inline-block;font-size:.86rem;font-weight:600;color:var(--gray-500);margin-bottom:24px;
+    transition:color .2s var(--ease);
+  }
+  .back-link:hover{color:var(--accent-strong)}
+
+  .post h1{font-size:var(--fs-h2);margin-bottom:18px}
+  .post-meta{
+    display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--gray-500);font-weight:500;
+    margin-bottom:var(--space-8);
+  }
+  .post-updated{font-size:.8rem;color:var(--gray-500);margin-top:-24px;margin-bottom:32px;font-style:italic}
+
+  .post-body :global(h2){font-size:1.35rem;margin-top:var(--space-7);margin-bottom:var(--space-3)}
+  .post-body :global(h3){font-size:1.1rem;margin-top:var(--space-6);margin-bottom:var(--space-2)}
+  .post-body :global(p){margin-bottom:var(--space-4);line-height:1.8;font-size:1.02rem}
+  .post-body :global(ul),.post-body :global(ol){display:flex;flex-direction:column;gap:8px;margin:0 0 var(--space-4);padding-left:22px}
+  .post-body :global(li){line-height:1.7;color:var(--text-secondary)}
+  .post-body :global(ul li){list-style:disc}
+  .post-body :global(ol li){list-style:decimal}
+  .post-body :global(a){color:var(--accent-strong);font-weight:600}
+  .post-body :global(a:hover){text-decoration:underline}
+  .post-body :global(strong){color:var(--text-primary)}
+  .post-body :global(blockquote){
+    border-left:3px solid var(--accent);padding-left:20px;margin:var(--space-6) 0;
+    font-family:var(--font-display);font-weight:600;font-size:1.15rem;color:var(--text-primary);
+  }
+
+  .post-cta{
+    margin-top:var(--space-9);padding:40px;border-radius:var(--radius-lg);
+    background:var(--navy-900);color:var(--white);text-align:center;
+  }
+  .post-cta h3{font-size:1.3rem;margin-bottom:12px;color:var(--white)}
+  .post-cta p{color:var(--gray-300);margin-bottom:26px;max-width:440px;margin-inline:auto}
+</style>
