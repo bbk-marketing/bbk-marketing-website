@@ -29,7 +29,6 @@ export const site = {
   },
   analytics: {
     googleAnalyticsId: 'G-TZV6TLJLMN',
-    // Placeholder — update once the Meta Pixel ID is provided.
-    metaPixelId: '',
+    metaPixelId: '757147694050894',
   },
 } as const;
