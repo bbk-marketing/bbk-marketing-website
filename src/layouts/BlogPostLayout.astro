@@ -9,7 +9,7 @@ export interface Props {
 }
 
 const { post } = Astro.props;
-const { title, description, publishDate, updatedDate, author, category } = post.data;
+const { title, description, publishDate, updatedDate, author, category, heroImage, heroImageAlt } = post.data;
 const readingTime = estimateReadingTime(post.body);
 
 const jsonLd = {
@@ -35,6 +35,9 @@ const jsonLd = {
   description={description}
   ogType="article"
   publishedTime={publishDate.toISOString()}
+  ogImage={heroImage}
+  ogImageWidth={heroImage ? '1536' : undefined}
+  ogImageHeight={heroImage ? '1024' : undefined}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <article class="post section">
@@ -51,6 +54,12 @@ const jsonLd = {
       </div>
       {updatedDate && (
         <p class="post-updated">Updated {formatDate(updatedDate)}</p>
+      )}
+
+      {heroImage && (
+        <div class="post-hero-image">
+          <img src={heroImage} alt={heroImageAlt ?? title} width="1536" height="1024" />
+        </div>
       )}
 
       <div class="post-body">
@@ -81,6 +90,12 @@ const jsonLd = {
     margin-bottom:var(--space-8);
   }
   .post-updated{font-size:.8rem;color:var(--gray-500);margin-top:-24px;margin-bottom:32px;font-style:italic}
+
+  .post-hero-image{
+    margin-bottom:var(--space-8);border-radius:var(--radius-lg);overflow:hidden;
+    aspect-ratio:3/2;background:var(--gray-100);
+  }
+  .post-hero-image img{width:100%;height:100%;object-fit:cover}
 
   .post-body :global(h2){font-size:1.35rem;margin-top:var(--space-7);margin-bottom:var(--space-3)}
   .post-body :global(h3){font-size:1.1rem;margin-top:var(--space-6);margin-bottom:var(--space-2)}

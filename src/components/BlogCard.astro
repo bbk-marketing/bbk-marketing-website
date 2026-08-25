@@ -9,26 +9,40 @@ export interface Props {
 
 const { post, featured = false } = Astro.props;
 const readingTime = estimateReadingTime(post.body);
+const { heroImage, heroImageAlt, title } = post.data;
 ---
 
 <a href={`/blog/${post.slug}`} class:list={['blog-card', { featured }]} data-reveal>
-  <span class="blog-card-category">{post.data.category}</span>
-  <h3>{post.data.title}</h3>
-  <p>{post.data.description}</p>
-  <div class="blog-card-meta">
-    <time datetime={post.data.publishDate.toISOString()}>{formatDate(post.data.publishDate)}</time>
-    <span aria-hidden="true">&middot;</span>
-    <span>{readingTime} min read</span>
+  {heroImage && (
+    <div class="blog-card-image">
+      <img src={heroImage} alt={heroImageAlt ?? title} loading="lazy" width="600" height="400" />
+    </div>
+  )}
+  <div class="blog-card-body">
+    <span class="blog-card-category">{post.data.category}</span>
+    <h3>{title}</h3>
+    <p>{post.data.description}</p>
+    <div class="blog-card-meta">
+      <time datetime={post.data.publishDate.toISOString()}>{formatDate(post.data.publishDate)}</time>
+      <span aria-hidden="true">&middot;</span>
+      <span>{readingTime} min read</span>
+    </div>
   </div>
 </a>
 
 <style>
   .blog-card{
-    display:flex;flex-direction:column;
+    display:flex;flex-direction:column;overflow:hidden;
     background:var(--white);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);
-    padding:30px 28px;transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+    transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
   }
   .blog-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:transparent}
+
+  .blog-card-image{aspect-ratio:3/2;overflow:hidden;background:var(--gray-100)}
+  .blog-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease)}
+  .blog-card:hover .blog-card-image img{transform:scale(1.04)}
+
+  .blog-card-body{display:flex;flex-direction:column;flex:1;padding:30px 28px}
   .blog-card-category{
     display:inline-block;align-self:flex-start;
     font-family:var(--font-body);font-weight:700;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
@@ -42,8 +56,12 @@ const readingTime = estimateReadingTime(post.body);
     padding-top:16px;border-top:1px solid var(--border-subtle);
   }
 
-  .blog-card.featured{
-    padding:38px;
-  }
+  .blog-card.featured .blog-card-body{padding:38px}
   .blog-card.featured h3{font-size:1.5rem}
+
+  @media (min-width:760px){
+    .blog-card.featured{flex-direction:row}
+    .blog-card.featured .blog-card-image{width:48%;aspect-ratio:auto}
+    .blog-card.featured .blog-card-body{width:52%;justify-content:center}
+  }
 </style>
