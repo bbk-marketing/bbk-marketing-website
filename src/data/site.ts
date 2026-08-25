@@ -27,4 +27,9 @@ export const site = {
     baseUrl: 'https://portal.bbkenergy.com',
     websiteToken: 'Uv9uLRJe9jPsCAahYjmGs3Ji',
   },
+  analytics: {
+    googleAnalyticsId: 'G-TZV6TLJLMN',
+    // Placeholder — update once the Meta Pixel ID is provided.
+    metaPixelId: '',
+  },
 } as const;
