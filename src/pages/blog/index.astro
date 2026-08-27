@@ -48,7 +48,7 @@ const [featuredPost, ...restPosts] = posts;
   .blog-hero{padding-top:calc(var(--header-h) + 64px);padding-bottom:24px}
   .empty-state{color:var(--text-secondary);font-size:1.02rem}
   .blog-list :global(.blog-card.featured){margin-bottom:28px}
-  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
   @media (max-width:960px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
   @media (max-width:640px){.blog-grid{grid-template-columns:1fr}}
 </style>

@@ -9,13 +9,19 @@ export interface Props {
 
 const { post, featured = false } = Astro.props;
 const readingTime = estimateReadingTime(post.body);
-const { heroImage, heroImageAlt, title } = post.data;
+const { heroImage, heroImageAlt, heroImageWidth, heroImageHeight, title } = post.data;
 ---
 
 <a href={`/blog/${post.slug}`} class:list={['blog-card', { featured }]} data-reveal>
   {heroImage && (
     <div class="blog-card-image">
-      <img src={heroImage} alt={heroImageAlt ?? title} loading="lazy" width="600" height="400" />
+      <img
+        src={heroImage}
+        alt={heroImageAlt ?? title}
+        loading="lazy"
+        width={heroImageWidth}
+        height={heroImageHeight}
+      />
     </div>
   )}
   <div class="blog-card-body">
@@ -38,8 +44,14 @@ const { heroImage, heroImageAlt, title } = post.data;
   }
   .blog-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:transparent}
 
-  .blog-card-image{aspect-ratio:3/2;overflow:hidden;background:var(--gray-100)}
-  .blog-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease)}
+  /*
+   * These hero images are dense infographics with text to the edge, not
+   * candid photography — cropping to a forced ratio cuts off titles/labels.
+   * Each image renders at its own real aspect ratio (from frontmatter
+   * width/height) instead of being cover-cropped into a uniform box.
+   */
+  .blog-card-image{overflow:hidden;background:var(--gray-100);line-height:0}
+  .blog-card-image img{width:100%;height:auto;display:block;transition:transform .4s var(--ease)}
   .blog-card:hover .blog-card-image img{transform:scale(1.04)}
 
   .blog-card-body{display:flex;flex-direction:column;flex:1;padding:30px 28px}
@@ -60,8 +72,8 @@ const { heroImage, heroImageAlt, title } = post.data;
   .blog-card.featured h3{font-size:1.5rem}
 
   @media (min-width:760px){
-    .blog-card.featured{flex-direction:row}
-    .blog-card.featured .blog-card-image{width:48%;aspect-ratio:auto}
+    .blog-card.featured{flex-direction:row;align-items:center}
+    .blog-card.featured .blog-card-image{width:48%}
     .blog-card.featured .blog-card-body{width:52%;justify-content:center}
   }
 </style>

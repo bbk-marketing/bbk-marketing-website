@@ -15,6 +15,8 @@ tags:
   - "research participant recruitment"
 heroImage: "/img/blog/clinical-research-marketing-vs-healthcare-marketing.png"
 heroImageAlt: "A research professional reviewing a clinical trial recruitment campaign dashboard on a large screen, with a colleague working nearby in a modern research site office."
+heroImageWidth: 1536
+heroImageHeight: 1024
 ---
 
 Clinical research marketing and traditional healthcare marketing may appear similar at first glance. Both operate in healthcare-related environments, communicate with patients or consumers, and increasingly rely on digital channels to reach specific audiences.
@@ -217,6 +219,12 @@ Only then should channel selection become the central question.
 That is what makes clinical research marketing fundamentally different from ordinary healthcare promotion. It combines marketing strategy, participant recruitment, digital advertising, controlled creative development, communication workflows, measurement, and operational execution.
 
 The advertisement is important. The system behind the advertisement is what determines whether attention becomes recruitment opportunity.
+
+## Related Reading
+
+- [Clinical Trial Patient Recruitment: From Advertising Clicks to Real Participant Opportunities](/blog/clinical-trial-patient-recruitment-funnel)
+- [Why Research Sites Should Stop Measuring Recruitment Success by Leads Alone](/blog/clinical-trial-recruitment-metrics-beyond-leads)
+- [IRB Review and Clinical Trial Advertising: What Marketing Teams Should Understand](/blog/irb-review-clinical-trial-advertising)
 
 ## Frequently Asked Questions
 
