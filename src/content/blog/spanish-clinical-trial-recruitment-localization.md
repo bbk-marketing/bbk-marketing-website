@@ -13,6 +13,10 @@ tags:
   - "Spanish recruitment materials"
   - "bilingual research sites"
   - "clinical trial translation"
+heroImage: "/img/blog/spanish-clinical-trial-recruitment-localization.png"
+heroImageAlt: "A bilingual clinical research coordinator connecting an English recruitment journey and a Spanish recruitment journey, both leading to the same Research Site."
+heroImageWidth: 1536
+heroImageHeight: 1024
 ---
 
 A Research Site launches a clinical trial recruitment campaign in English. The campaign performs well. The team decides to reach Spanish-speaking participants.
