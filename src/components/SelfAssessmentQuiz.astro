@@ -4,6 +4,8 @@ import { site } from '../data/site';
 
 const orgTypes = ['Research Site', 'CRO', 'SMO', 'Sponsor', 'Other'];
 const totalQuestions = selfAssessmentCategories.reduce((n, c) => n + c.questions.length, 0);
+const gaugeRadius = 52;
+const gaugeCircumference = 2 * Math.PI * gaugeRadius;
 ---
 
 <div class="saq" id="saq" data-total={totalQuestions}>
@@ -48,7 +50,7 @@ const totalQuestions = selfAssessmentCategories.reduce((n, c) => n + c.questions
       you agree below, to follow up about how BBK can help.
     </p>
 
-    <form id="saq-form" novalidate>
+    <form id="saq-form">
       <div class="form-row">
         <div class="field">
           <label for="saq-org">Organization Name</label>
@@ -108,7 +110,22 @@ const totalQuestions = selfAssessmentCategories.reduce((n, c) => n + c.questions
   <!-- STEP 3: Results -->
   <div class="saq-step" id="saq-step-result" hidden>
     <div class="saq-result-badge">
-      <div class="saq-result-pct" id="saq-result-pct">—</div>
+      <div class="saq-gauge">
+        <svg viewBox="0 0 120 120" width="180" height="180">
+          <circle class="saq-gauge-track" cx="60" cy="60" r={gaugeRadius} />
+          <circle
+            class="saq-gauge-fill"
+            id="saq-gauge-fill"
+            cx="60"
+            cy="60"
+            r={gaugeRadius}
+            transform="rotate(-90 60 60)"
+            stroke-dasharray={gaugeCircumference}
+            stroke-dashoffset={gaugeCircumference}
+          />
+        </svg>
+        <div class="saq-gauge-text" id="saq-result-pct">—</div>
+      </div>
       <div class="saq-result-label" id="saq-result-label">—</div>
     </div>
     <div class="saq-result-breakdown" id="saq-result-breakdown"></div>
@@ -122,7 +139,7 @@ const totalQuestions = selfAssessmentCategories.reduce((n, c) => n + c.questions
   </div>
 </div>
 
-<script define:vars={{ categories: selfAssessmentCategories, tierColor: TIER_COLOR, tierLabel: TIER_LABEL }}>
+<script define:vars={{ categories: selfAssessmentCategories, tierColor: TIER_COLOR, tierLabel: TIER_LABEL, gaugeCircumference }}>
   const root = document.getElementById('saq');
   const total = Number(root.dataset.total);
 
@@ -165,6 +182,7 @@ const totalQuestions = selfAssessmentCategories.reduce((n, c) => n + c.questions
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    if (!form.reportValidity()) return;
     errorEl.hidden = true;
 
     const answers = {};
@@ -218,6 +236,10 @@ const totalQuestions = selfAssessmentCategories.reduce((n, c) => n + c.questions
       document.getElementById('saq-result-pct').style.color = tierColor[tier];
       document.getElementById('saq-result-label').textContent = tierLabel[tier];
       document.getElementById('saq-result-label').style.color = tierColor[tier];
+
+      const gaugeFill = document.getElementById('saq-gauge-fill');
+      gaugeFill.style.stroke = tierColor[tier];
+      gaugeFill.style.strokeDashoffset = String(gaugeCircumference * (1 - pct / 100));
 
       const breakdown = document.getElementById('saq-result-breakdown');
       breakdown.innerHTML = categoryScores
@@ -313,8 +335,15 @@ const totalQuestions = selfAssessmentCategories.reduce((n, c) => n + c.questions
   .saq-error{color:#c00000;font-size:.86rem;margin-top:12px;font-weight:600}
 
   .saq-result-badge{text-align:center;padding:var(--space-7) 0;margin-bottom:var(--space-6)}
-  .saq-result-pct{font-family:var(--font-display);font-size:clamp(3rem,2.5rem+2vw,4.5rem);font-weight:800;line-height:1}
-  .saq-result-label{font-weight:700;font-size:1.1rem;margin-top:8px}
+  .saq-gauge{position:relative;width:180px;height:180px;margin:0 auto}
+  .saq-gauge svg{width:100%;height:100%}
+  .saq-gauge-track{fill:none;stroke:var(--gray-100);stroke-width:10}
+  .saq-gauge-fill{fill:none;stroke-width:10;stroke-linecap:round;transition:stroke-dashoffset 1s var(--ease), stroke .3s var(--ease)}
+  .saq-gauge-text{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-display);font-size:clamp(2rem,1.6rem+1.4vw,2.6rem);font-weight:800;line-height:1;
+  }
+  .saq-result-label{font-weight:700;font-size:1.1rem;margin-top:16px}
   .saq-result-breakdown{display:flex;flex-direction:column;gap:16px;margin-bottom:var(--space-6)}
   .saq-bar-row{display:grid;grid-template-columns:1fr 2fr auto;gap:12px;align-items:center}
   .saq-bar-name{font-size:.88rem;font-weight:600;color:var(--text-primary)}
