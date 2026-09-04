@@ -15,6 +15,7 @@ export const site = {
   social: {
     facebook: 'https://www.facebook.com/bbkmarketingsolutions/',
     instagram: 'https://www.instagram.com/bbkmarketingsolutions/',
+    linkedin: 'https://www.linkedin.com/company/bbk-marketing-solutions-llc',
   },
   url: 'https://www.bbk-marketing.com',
   rps: {

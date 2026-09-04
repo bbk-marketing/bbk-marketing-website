@@ -98,8 +98,12 @@ const serviceInterests = [
       </p>
       <div class="form-success" id="formSuccess">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-        <span>Thank you. Your email client should now be open — we'll follow up shortly.</span>
+        <span id="formSuccessText">Thank you. We've received your request and will follow up shortly.</span>
       </div>
+      <p class="form-error" id="formError" hidden>
+        Something went wrong submitting your request. Please try again, or email us directly at
+        <a href={`mailto:${site.email}`}>{site.email}</a>.
+      </p>
     </form>
   </div>
 </section>
@@ -166,40 +170,71 @@ const serviceInterests = [
   }
   .form-success.show{display:flex}
   .form-success svg{width:18px;height:18px;flex-shrink:0}
+  .form-error{margin-top:16px;padding:14px 16px;border-radius:10px;background:rgba(192,0,0,.12);color:#ff9b9b;font-size:.86rem;font-weight:500;line-height:1.5}
+  .form-error a{color:var(--cyan-300);font-weight:700}
 </style>
 
 <script>
   const form = document.getElementById('consultForm') as HTMLFormElement | null;
   const success = document.getElementById('formSuccess');
+  const successText = document.getElementById('formSuccessText');
+  const errorEl = document.getElementById('formError');
+  const submitBtn = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
 
-  form?.addEventListener('submit', (e) => {
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
+    errorEl?.setAttribute('hidden', '');
+    success?.classList.remove('show');
+
     const data = new FormData(form);
-    const get = (k: string) => (data.get(k) || '').toString();
+    const get = (k: string) => (data.get(k) || '').toString().trim();
+    const consented = (document.getElementById('smsConsent') as HTMLInputElement | null)?.checked ?? false;
 
-    const lines = [
-      `Name: ${get('name')}`,
-      `Company: ${get('company')}`,
-      `Email: ${get('email')}`,
-      get('phone') ? `Phone: ${get('phone')}` : null,
-      `Organization Type: ${get('orgType')}`,
-      `Service Interest: ${get('service')}`,
-      get('study') ? `Study / Therapeutic Area: ${get('study')}` : null,
-      get('sites') ? `Number of Sites: ${get('sites')}` : null,
-      `Consented to calls/SMS: ${(document.getElementById('smsConsent') as HTMLInputElement | null)?.checked ? 'Yes' : 'No'}`,
-      '',
-      get('message'),
-    ]
-      .filter(Boolean)
-      .join('\n');
+    const payload = {
+      fullName: get('name'),
+      organizationName: get('company'),
+      email: get('email'),
+      phone: get('phone') || undefined,
+      organizationType: get('orgType') || undefined,
+      serviceInterest: get('service') || undefined,
+      studyOrTherapeuticArea: get('study') || undefined,
+      numberOfSites: get('sites') || undefined,
+      message: get('message') || undefined,
+      consentToCallsAndSms: consented,
+    };
 
-    const mailto = `mailto:sales@bbk-marketing.com?subject=${encodeURIComponent(
-      'Consultation Request — ' + get('name')
-    )}&body=${encodeURIComponent(lines)}`;
-    window.location.href = mailto;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+    }
 
-    success?.classList.add('show');
-    form.reset();
-    setTimeout(() => success?.classList.remove('show'), 7000);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error('Submission failed');
+
+      if (successText) successText.textContent = "Thank you. We've received your request and will follow up shortly.";
+      success?.classList.add('show');
+      form.reset();
+      setTimeout(() => success?.classList.remove('show'), 7000);
+    } catch {
+      const mailto = `mailto:sales@bbk-marketing.com?subject=${encodeURIComponent(
+        'Consultation Request — ' + get('name')
+      )}&body=${encodeURIComponent(
+        [`Name: ${get('name')}`, `Company: ${get('company')}`, `Email: ${get('email')}`, get('phone') ? `Phone: ${get('phone')}` : null, '', get('message')]
+          .filter(Boolean)
+          .join('\n')
+      )}`;
+      window.location.href = mailto;
+      errorEl?.removeAttribute('hidden');
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Request a Consultation';
+      }
+    }
   });
 </script>

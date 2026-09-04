@@ -17,6 +17,7 @@ export const navItems: NavItem[] = [
   { label: 'Our Process', href: '/#our-process' },
   { label: 'About BBK', href: '/#about' },
   { label: 'Blog', href: '/blog' },
+  { label: 'Self-Assessment', href: '/self-assessment' },
   { label: 'Contact', href: '/#contact' },
 ];
 

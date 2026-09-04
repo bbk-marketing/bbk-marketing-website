@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SelfAssessmentQuiz from '../components/SelfAssessmentQuiz.astro';
+---
+
+<Layout
+  title="Strategic Self-Assessment | BBK Marketing Solutions"
+  description="Answer 24 quick questions to see how your organization's marketing and recruitment strategy stacks up — and get a personalized breakdown by email."
+>
+  <section class="saq-hero section">
+    <div class="container saq-hero-inner">
+      <p class="eyebrow">Strategic Self-Assessment</p>
+      <h1>How Strong Is Your Recruitment &amp; Marketing Strategy?</h1>
+      <p class="saq-hero-lead">
+        Answer 24 quick statements across six categories — Digital Presence, Acquisition Strategy, Conversion,
+        Brand Positioning, Data Analysis, and Marketing. It takes about five minutes, and you'll get a
+        personalized score with a category-by-category breakdown.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <SelfAssessmentQuiz />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .saq-hero{padding-top:calc(var(--header-h) + 56px);padding-bottom:var(--space-7)}
+  .saq-hero-inner{max-width:760px;margin-inline:auto;text-align:center}
+  .saq-hero h1{font-size:var(--fs-h2);margin-bottom:var(--space-4)}
+  .saq-hero-lead{font-size:var(--fs-lead);line-height:1.7;max-width:640px;margin-inline:auto}
+</style>
