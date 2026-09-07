@@ -22,7 +22,7 @@ export const GET: APIRoute = async () => {
   ];
 
   const postUrls: SitemapUrl[] = posts.map((post) => ({
-    loc: `/blog/${post.slug}`,
+    loc: `/blog/${post.id}`,
     changefreq: 'monthly',
     priority: '0.6',
     lastmod: (post.data.updatedDate ?? post.data.publishDate).toISOString().split('T')[0],

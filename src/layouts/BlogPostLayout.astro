@@ -21,7 +21,7 @@ const {
   heroImageWidth,
   heroImageHeight,
 } = post.data;
-const readingTime = estimateReadingTime(post.body);
+const readingTime = estimateReadingTime(post.body ?? '');
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -36,7 +36,7 @@ const jsonLd = {
     name: site.name,
     logo: { '@type': 'ImageObject', url: `${site.url}/logo.png` },
   },
-  mainEntityOfPage: { '@type': 'WebPage', '@id': `${site.url}/blog/${post.slug}` },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': `${site.url}/blog/${post.id}` },
   articleSection: category,
 };
 ---

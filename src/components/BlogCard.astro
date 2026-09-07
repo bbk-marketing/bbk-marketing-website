@@ -8,11 +8,11 @@ export interface Props {
 }
 
 const { post, featured = false } = Astro.props;
-const readingTime = estimateReadingTime(post.body);
+const readingTime = estimateReadingTime(post.body ?? '');
 const { heroImage, heroImageAlt, heroImageWidth, heroImageHeight, title } = post.data;
 ---
 
-<a href={`/blog/${post.slug}`} class:list={['blog-card', { featured }]} data-reveal>
+<a href={`/blog/${post.id}`} class:list={['blog-card', { featured }]} data-reveal>
   <div class="blog-card-image">
     {heroImage && (
       <img
