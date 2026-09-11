@@ -217,6 +217,7 @@ That is the real opportunity of multi-site clinical trial recruitment. Not simpl
 - [How Research Sites Can Improve Participant Recruitment Without Increasing Ad Spend](/blog/improve-clinical-trial-recruitment-without-more-ad-spend)
 - [Meta Ads for Clinical Trial Recruitment: What Research Sites Need to Know](/blog/meta-ads-clinical-trial-recruitment)
 - [What Should a Clinical Research Site Look for in a Recruitment Marketing Partner?](/blog/clinical-trial-recruitment-marketing-partner)
+- [From Lead Generation to Preliminary Pre-Screening: The Evolution of Clinical Research Recruitment](/blog/clinical-trial-pre-screening-recruitment-evolution)
 
 ## Frequently Asked Questions
 

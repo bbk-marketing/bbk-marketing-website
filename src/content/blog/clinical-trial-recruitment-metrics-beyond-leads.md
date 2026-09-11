@@ -204,6 +204,7 @@ Once those questions become part of routine reporting, marketing stops being jud
 - [What Makes Clinical Research Marketing Different From Traditional Healthcare Marketing?](/blog/clinical-research-marketing-vs-healthcare-marketing)
 - [Clinical Trial Patient Recruitment: From Advertising Clicks to Real Participant Opportunities](/blog/clinical-trial-patient-recruitment-funnel)
 - [How to Build a Digital Recruitment Strategy for a Clinical Research Study](/blog/clinical-trial-digital-recruitment-strategy)
+- [From Lead Generation to Preliminary Pre-Screening: The Evolution of Clinical Research Recruitment](/blog/clinical-trial-pre-screening-recruitment-evolution)
 
 ## Frequently Asked Questions
 

@@ -142,6 +142,7 @@ Before buying more traffic, improve the road that traffic is already traveling. 
 - [How to Build a Digital Recruitment Strategy for a Clinical Research Study](/blog/clinical-trial-digital-recruitment-strategy)
 - [English vs Spanish Clinical Trial Campaigns: Why Translation Alone Is Not Enough](/blog/spanish-clinical-trial-recruitment-localization)
 - [The Hidden Cost of Slow Follow-Up in Clinical Research Recruitment](/blog/slow-follow-up-clinical-trial-recruitment)
+- [From Lead Generation to Preliminary Pre-Screening: The Evolution of Clinical Research Recruitment](/blog/clinical-trial-pre-screening-recruitment-evolution)
 
 ## Frequently Asked Questions
 
