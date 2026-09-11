@@ -143,6 +143,7 @@ Before buying more traffic, improve the road that traffic is already traveling. 
 - [English vs Spanish Clinical Trial Campaigns: Why Translation Alone Is Not Enough](/blog/spanish-clinical-trial-recruitment-localization)
 - [The Hidden Cost of Slow Follow-Up in Clinical Research Recruitment](/blog/slow-follow-up-clinical-trial-recruitment)
 - [From Lead Generation to Preliminary Pre-Screening: The Evolution of Clinical Research Recruitment](/blog/clinical-trial-pre-screening-recruitment-evolution)
+- [The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns](/blog/clinical-trial-recruitment-kpis)
 
 ## Frequently Asked Questions
 

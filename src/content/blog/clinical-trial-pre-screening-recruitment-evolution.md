@@ -290,6 +290,7 @@ That is a much more connected recruitment system. And it shifts the marketing ob
 - [How Research Sites Can Improve Participant Recruitment Without Increasing Ad Spend](/blog/improve-clinical-trial-recruitment-without-more-ad-spend)
 - [The Hidden Cost of Slow Follow-Up in Clinical Research Recruitment](/blog/slow-follow-up-clinical-trial-recruitment)
 - [Multi-Site Clinical Trial Recruitment: Centralized Campaigns vs Site-by-Site Advertising](/blog/multi-site-clinical-trial-recruitment-centralized-vs-local)
+- [The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns](/blog/clinical-trial-recruitment-kpis)
 
 ## Frequently Asked Questions
 
