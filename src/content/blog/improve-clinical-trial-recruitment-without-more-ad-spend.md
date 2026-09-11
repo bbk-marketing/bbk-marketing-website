@@ -145,6 +145,7 @@ Before buying more traffic, improve the road that traffic is already traveling. 
 - [From Lead Generation to Preliminary Pre-Screening: The Evolution of Clinical Research Recruitment](/blog/clinical-trial-pre-screening-recruitment-evolution)
 - [The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns](/blog/clinical-trial-recruitment-kpis)
 - [Why Participant Experience Matters Before the First Research Site Call](/blog/participant-experience-clinical-trial-recruitment)
+- [Human Follow-Up vs Automation in Clinical Research Recruitment](/blog/human-vs-automation-clinical-trial-recruitment)
 
 ## Frequently Asked Questions
 

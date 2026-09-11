@@ -267,6 +267,7 @@ Clinical trial recruitment campaigns should not be measured by a single number. 
 - [How Research Sites Can Improve Participant Recruitment Without Increasing Ad Spend](/blog/improve-clinical-trial-recruitment-without-more-ad-spend)
 - [The Hidden Cost of Slow Follow-Up in Clinical Research Recruitment](/blog/slow-follow-up-clinical-trial-recruitment)
 - [From Lead Generation to Preliminary Pre-Screening: The Evolution of Clinical Research Recruitment](/blog/clinical-trial-pre-screening-recruitment-evolution)
+- [Human Follow-Up vs Automation in Clinical Research Recruitment](/blog/human-vs-automation-clinical-trial-recruitment)
 
 ## Frequently Asked Questions
 
