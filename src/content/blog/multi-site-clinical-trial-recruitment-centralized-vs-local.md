@@ -219,6 +219,7 @@ That is the real opportunity of multi-site clinical trial recruitment. Not simpl
 - [What Should a Clinical Research Site Look for in a Recruitment Marketing Partner?](/blog/clinical-trial-recruitment-marketing-partner)
 - [From Lead Generation to Preliminary Pre-Screening: The Evolution of Clinical Research Recruitment](/blog/clinical-trial-pre-screening-recruitment-evolution)
 - [What Is Clinical Research Marketing? A Practical Guide for Research Sites and CROs](/blog/what-is-clinical-research-marketing)
+- [What Is a Pre-Screened Participant Referral?](/blog/what-is-a-pre-screened-participant-referral)
 
 ## Frequently Asked Questions
 

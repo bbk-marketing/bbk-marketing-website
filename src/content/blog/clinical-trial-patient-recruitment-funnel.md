@@ -198,6 +198,7 @@ Answering those questions turns digital advertising into a genuine clinical tria
 - [The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns](/blog/clinical-trial-recruitment-kpis)
 - [Why Participant Experience Matters Before the First Research Site Call](/blog/participant-experience-clinical-trial-recruitment)
 - [Lead Generation vs Participant Recruitment: Why the Difference Matters](/blog/lead-generation-vs-clinical-trial-participant-recruitment)
+- [What Is a Pre-Screened Participant Referral?](/blog/what-is-a-pre-screened-participant-referral)
 
 ## Frequently Asked Questions
 

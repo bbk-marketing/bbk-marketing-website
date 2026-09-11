@@ -198,6 +198,7 @@ For Research Sites, CROs, SMOs, and recruitment teams, the goal should not simpl
 - [From Lead Generation to Preliminary Pre-Screening: The Evolution of Clinical Research Recruitment](/blog/clinical-trial-pre-screening-recruitment-evolution)
 - [The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns](/blog/clinical-trial-recruitment-kpis)
 - [What Is Clinical Research Marketing? A Practical Guide for Research Sites and CROs](/blog/what-is-clinical-research-marketing)
+- [What Is a Pre-Screened Participant Referral?](/blog/what-is-a-pre-screened-participant-referral)
 
 ## Frequently Asked Questions
 
