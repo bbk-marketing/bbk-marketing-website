@@ -199,6 +199,7 @@ That is the foundation of a stronger clinical trial recruitment strategy.
 - [Clinical Trial Patient Recruitment: From Advertising Clicks to Real Participant Opportunities](/blog/clinical-trial-patient-recruitment-funnel)
 - [Why Research Sites Should Stop Measuring Recruitment Success by Leads Alone](/blog/clinical-trial-recruitment-metrics-beyond-leads)
 - [IRB Review and Clinical Trial Advertising: What Marketing Teams Should Understand](/blog/irb-review-clinical-trial-advertising)
+- [What Is Clinical Research Marketing? A Practical Guide for Research Sites and CROs](/blog/what-is-clinical-research-marketing)
 
 ## Frequently Asked Questions
 
