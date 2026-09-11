@@ -196,6 +196,7 @@ Answering those questions turns digital advertising into a genuine clinical tria
 - [How to Build a Digital Recruitment Strategy for a Clinical Research Study](/blog/clinical-trial-digital-recruitment-strategy)
 - [From Lead Generation to Preliminary Pre-Screening: The Evolution of Clinical Research Recruitment](/blog/clinical-trial-pre-screening-recruitment-evolution)
 - [The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns](/blog/clinical-trial-recruitment-kpis)
+- [Why Participant Experience Matters Before the First Research Site Call](/blog/participant-experience-clinical-trial-recruitment)
 
 ## Frequently Asked Questions
 

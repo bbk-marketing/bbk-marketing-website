@@ -1,7 +1,7 @@
 ---
 title: "From Lead Generation to Preliminary Pre-Screening: The Evolution of Clinical Research Recruitment"
 description: "Clinical trial recruitment is evolving beyond lead generation. Learn how preliminary pre-screening, technology, and human review create better participant referrals."
-publishDate: 2026-09-11
+publishDate: 2026-06-24
 category: "Industry Insights"
 tags:
   - "clinical trial pre-screening"
@@ -291,6 +291,7 @@ That is a much more connected recruitment system. And it shifts the marketing ob
 - [The Hidden Cost of Slow Follow-Up in Clinical Research Recruitment](/blog/slow-follow-up-clinical-trial-recruitment)
 - [Multi-Site Clinical Trial Recruitment: Centralized Campaigns vs Site-by-Site Advertising](/blog/multi-site-clinical-trial-recruitment-centralized-vs-local)
 - [The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns](/blog/clinical-trial-recruitment-kpis)
+- [Why Participant Experience Matters Before the First Research Site Call](/blog/participant-experience-clinical-trial-recruitment)
 
 ## Frequently Asked Questions
 

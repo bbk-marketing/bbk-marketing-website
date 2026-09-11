@@ -206,6 +206,7 @@ The objective should therefore not only be to generate leads efficiently. It sho
 - [How Research Sites Can Improve Participant Recruitment Without Increasing Ad Spend](/blog/improve-clinical-trial-recruitment-without-more-ad-spend)
 - [From Lead Generation to Preliminary Pre-Screening: The Evolution of Clinical Research Recruitment](/blog/clinical-trial-pre-screening-recruitment-evolution)
 - [The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns](/blog/clinical-trial-recruitment-kpis)
+- [Why Participant Experience Matters Before the First Research Site Call](/blog/participant-experience-clinical-trial-recruitment)
 
 ## Frequently Asked Questions
 

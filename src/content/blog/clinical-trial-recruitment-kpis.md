@@ -1,7 +1,7 @@
 ---
 title: "The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns"
 description: "Learn which clinical trial recruitment KPIs matter most, from lead cost and contact rate to referrals, screening, enrollment, and recruitment dashboard reporting."
-publishDate: 2026-09-11
+publishDate: 2026-07-09
 category: "Patient Recruitment"
 tags:
   - "clinical trial recruitment KPIs"

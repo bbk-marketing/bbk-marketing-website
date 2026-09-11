@@ -210,6 +210,7 @@ When those answers are yes, bilingual clinical research marketing moves beyond t
 - [How to Build a Digital Recruitment Strategy for a Clinical Research Study](/blog/clinical-trial-digital-recruitment-strategy)
 - [Meta Ads for Clinical Trial Recruitment: What Research Sites Need to Know](/blog/meta-ads-clinical-trial-recruitment)
 - [Clinical Research Recruitment Videos: Human Presenter, Voice-Over or AI Avatar?](/blog/clinical-trial-recruitment-videos-human-vs-ai)
+- [Why Participant Experience Matters Before the First Research Site Call](/blog/participant-experience-clinical-trial-recruitment)
 
 ## Frequently Asked Questions
 
