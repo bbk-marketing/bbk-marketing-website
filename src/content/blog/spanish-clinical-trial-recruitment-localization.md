@@ -213,6 +213,7 @@ When those answers are yes, bilingual clinical research marketing moves beyond t
 - [Why Participant Experience Matters Before the First Research Site Call](/blog/participant-experience-clinical-trial-recruitment)
 - [What Is Clinical Research Marketing? A Practical Guide for Research Sites and CROs](/blog/what-is-clinical-research-marketing)
 - [Preparing Recruitment Materials for IRB Review: A Practical Guide for Marketing Teams](/blog/preparing-recruitment-materials-for-irb-review)
+- [Translation vs Localization in Clinical Trial Advertising](/blog/translation-vs-localization-clinical-trial-advertising)
 
 ## Frequently Asked Questions
 

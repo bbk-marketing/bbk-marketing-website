@@ -228,6 +228,7 @@ IRB-aware planning is sometimes described as limiting creativity. In practice, i
 - [Meta Ads for Clinical Trial Recruitment: What Research Sites Need to Know](/blog/meta-ads-clinical-trial-recruitment)
 - [Clinical Research Recruitment Videos: Human Presenter, Voice-Over or AI Avatar?](/blog/clinical-trial-recruitment-videos-human-vs-ai)
 - [How to Build a Clinical Trial Recruitment Funnel](/blog/how-to-build-a-clinical-trial-recruitment-funnel)
+- [Translation vs Localization in Clinical Trial Advertising](/blog/translation-vs-localization-clinical-trial-advertising)
 
 ## Frequently Asked Questions
 

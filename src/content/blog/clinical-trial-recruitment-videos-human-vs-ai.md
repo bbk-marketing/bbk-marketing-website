@@ -196,6 +196,7 @@ Technology changes the production method. It does not change the fundamental pur
 - [English vs Spanish Clinical Trial Campaigns: Why Translation Alone Is Not Enough](/blog/spanish-clinical-trial-recruitment-localization)
 - [Meta Ads for Clinical Trial Recruitment: What Research Sites Need to Know](/blog/meta-ads-clinical-trial-recruitment)
 - [Preparing Recruitment Materials for IRB Review: A Practical Guide for Marketing Teams](/blog/preparing-recruitment-materials-for-irb-review)
+- [Translation vs Localization in Clinical Trial Advertising](/blog/translation-vs-localization-clinical-trial-advertising)
 
 ## Frequently Asked Questions
 
