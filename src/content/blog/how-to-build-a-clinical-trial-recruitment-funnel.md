@@ -1,7 +1,7 @@
 ---
 title: "How to Build a Clinical Trial Recruitment Funnel"
 description: "Learn how to build a clinical trial recruitment funnel from awareness and lead generation to pre-screening, referrals, Site screening, and enrollment."
-publishDate: 2026-10-07
+publishDate: 2026-09-08
 category: "Clinical Research Marketing"
 tags:
   - "clinical trial recruitment funnel"
