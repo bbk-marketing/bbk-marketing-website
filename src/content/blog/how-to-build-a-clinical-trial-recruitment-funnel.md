@@ -217,6 +217,7 @@ That is how a Research Site or CRO turns recruitment into a system that can be m
 - [The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns](/blog/clinical-trial-recruitment-kpis)
 - [Lead Generation vs Participant Recruitment: Why the Difference Matters](/blog/lead-generation-vs-clinical-trial-participant-recruitment)
 - [What Is a Pre-Screened Participant Referral?](/blog/what-is-a-pre-screened-participant-referral)
+- [Geographic Targeting for Clinical Trial Recruitment: How Far Should a Campaign Reach?](/blog/geographic-targeting-clinical-trial-recruitment)
 
 ## Frequently Asked Questions
 

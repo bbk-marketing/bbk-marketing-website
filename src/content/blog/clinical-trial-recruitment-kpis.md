@@ -272,6 +272,7 @@ Clinical trial recruitment campaigns should not be measured by a single number. 
 - [Lead Generation vs Participant Recruitment: Why the Difference Matters](/blog/lead-generation-vs-clinical-trial-participant-recruitment)
 - [What Is a Pre-Screened Participant Referral?](/blog/what-is-a-pre-screened-participant-referral)
 - [How to Build a Clinical Trial Recruitment Funnel](/blog/how-to-build-a-clinical-trial-recruitment-funnel)
+- [Geographic Targeting for Clinical Trial Recruitment: How Far Should a Campaign Reach?](/blog/geographic-targeting-clinical-trial-recruitment)
 
 ## Frequently Asked Questions
 

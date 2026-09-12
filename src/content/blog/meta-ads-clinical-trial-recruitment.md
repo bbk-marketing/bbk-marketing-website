@@ -187,6 +187,7 @@ When Research Sites understand that system, Meta stops being simply a source of 
 - [English vs Spanish Clinical Trial Campaigns: Why Translation Alone Is Not Enough](/blog/spanish-clinical-trial-recruitment-localization)
 - [The Hidden Cost of Slow Follow-Up in Clinical Research Recruitment](/blog/slow-follow-up-clinical-trial-recruitment)
 - [What Is Clinical Research Marketing? A Practical Guide for Research Sites and CROs](/blog/what-is-clinical-research-marketing)
+- [Geographic Targeting for Clinical Trial Recruitment: How Far Should a Campaign Reach?](/blog/geographic-targeting-clinical-trial-recruitment)
 
 ## Frequently Asked Questions
 
