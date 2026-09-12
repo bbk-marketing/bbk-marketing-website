@@ -185,6 +185,7 @@ A successful recruitment campaign therefore does not simply reach people near a 
 - [The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns](/blog/clinical-trial-recruitment-kpis)
 - [How to Build a Clinical Trial Recruitment Funnel](/blog/how-to-build-a-clinical-trial-recruitment-funnel)
 - [Meta Ads for Clinical Trial Recruitment: What Research Sites Need to Know](/blog/meta-ads-clinical-trial-recruitment)
+- [How to Measure Recruitment Performance by Research Site](/blog/how-to-measure-recruitment-performance-by-research-site)
 
 ## Frequently Asked Questions
 

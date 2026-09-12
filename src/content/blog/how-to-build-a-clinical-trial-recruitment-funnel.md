@@ -219,6 +219,7 @@ That is how a Research Site or CRO turns recruitment into a system that can be m
 - [What Is a Pre-Screened Participant Referral?](/blog/what-is-a-pre-screened-participant-referral)
 - [Geographic Targeting for Clinical Trial Recruitment: How Far Should a Campaign Reach?](/blog/geographic-targeting-clinical-trial-recruitment)
 - [Preparing Recruitment Materials for IRB Review: A Practical Guide for Marketing Teams](/blog/preparing-recruitment-materials-for-irb-review)
+- [How to Measure Recruitment Performance by Research Site](/blog/how-to-measure-recruitment-performance-by-research-site)
 
 ## Frequently Asked Questions
 
