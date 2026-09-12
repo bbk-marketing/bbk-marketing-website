@@ -196,6 +196,7 @@ The strongest referral is one where the participant understands what they respon
 - [The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns](/blog/clinical-trial-recruitment-kpis)
 - [Lead Generation vs Participant Recruitment: Why the Difference Matters](/blog/lead-generation-vs-clinical-trial-participant-recruitment)
 - [Multi-Site Clinical Trial Recruitment: Centralized Campaigns vs Site-by-Site Advertising](/blog/multi-site-clinical-trial-recruitment-centralized-vs-local)
+- [How to Build a Clinical Trial Recruitment Funnel](/blog/how-to-build-a-clinical-trial-recruitment-funnel)
 
 ## Frequently Asked Questions
 
