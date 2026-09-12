@@ -212,6 +212,7 @@ When those answers are yes, bilingual clinical research marketing moves beyond t
 - [Clinical Research Recruitment Videos: Human Presenter, Voice-Over or AI Avatar?](/blog/clinical-trial-recruitment-videos-human-vs-ai)
 - [Why Participant Experience Matters Before the First Research Site Call](/blog/participant-experience-clinical-trial-recruitment)
 - [What Is Clinical Research Marketing? A Practical Guide for Research Sites and CROs](/blog/what-is-clinical-research-marketing)
+- [Preparing Recruitment Materials for IRB Review: A Practical Guide for Marketing Teams](/blog/preparing-recruitment-materials-for-irb-review)
 
 ## Frequently Asked Questions
 

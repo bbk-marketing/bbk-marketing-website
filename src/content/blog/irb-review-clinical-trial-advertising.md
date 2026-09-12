@@ -253,6 +253,7 @@ This workflow treats IRB considerations as part of marketing operations rather t
 
 - [What Makes Clinical Research Marketing Different From Traditional Healthcare Marketing?](/blog/clinical-research-marketing-vs-healthcare-marketing)
 - [How to Build a Digital Recruitment Strategy for a Clinical Research Study](/blog/clinical-trial-digital-recruitment-strategy)
+- [Preparing Recruitment Materials for IRB Review: A Practical Guide for Marketing Teams](/blog/preparing-recruitment-materials-for-irb-review)
 
 ## Frequently Asked Questions
 
