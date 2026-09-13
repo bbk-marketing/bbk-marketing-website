@@ -5,6 +5,11 @@ reference only. First created 2026-09-13 after auditing 24 published articles;
 no equivalent document existed before this (confirmed by repo search — see
 audit notes at the bottom).
 
+**Status: initial audit + first optimization pass both complete** (2026-09-13).
+Sections 4 and 6 below describe the *pre-optimization* state for the
+historical record; see the "Executed" note at the end of each for what
+actually changed.
+
 Rules that apply to everything in this file:
 - **Never** change a published article's URL/slug to "fix" SEO. URLs here are
   historical fact, not something this map gets to override.
@@ -117,10 +122,12 @@ incremental reciprocal-linking as new articles published — never pruned):
 | improve-clinical-trial-recruitment-without-more-ad-spend (#7) | 9 |
 | clinical-trial-patient-recruitment-funnel (#2) | 9 |
 
-**Recommended action (not yet executed — needs sign-off):** trim these seven
-down to the 3–5 most topically relevant links (keep the newest + most
-cluster-relevant, drop the rest), and recover #11's under-linking by adding
-it to the Related Reading of 2–3 cluster-A-adjacent articles.
+**Executed (2026-09-13):** all seven curated down to 5 links each (topically
+closest, not just "first 5"). #11's inbound went from 2 to 4 (added from
+Articles #1 and #4, alongside the 2 it already had from #12 and #17).
+Recomputed the full graph after the edit: minimum inbound across all 24
+articles is now 4, no article exceeds 8 outbound. Only content edited was
+the `## Related Reading` link lists — no body copy, titles, or URLs touched.
 
 ## 5. Site-Wide Technical/Structural Facts
 
@@ -135,11 +142,13 @@ posts identically:
 - **Structured data**: every post emits `BlogPosting` JSON-LD
   (`BlogPostLayout.astro`) — headline, description, dates, author (Org),
   publisher+logo, `articleSection` = category. Site-wide `Organization`
-  schema in `Layout.astro`. **Gap: no `FAQPage` schema**, despite every
-  single article having a "Frequently Asked Questions" H2 with Q/A pairs —
-  this is free rich-snippet potential currently left on the table. **Gap:
-  no `BreadcrumbList` schema** (site has a "← Back to Blog" link, not an
-  actual breadcrumb trail or its markup).
+  schema in `Layout.astro`. **Executed (2026-09-13): added `FAQPage`
+  schema**, extracted directly from each post's raw markdown body
+  (`src/utils/faq.ts`) so it can never diverge from the visible FAQ
+  section — zero content changes needed, all 24 posts already had exactly
+  5 Q&A pairs in a parseable format. **Executed: added `BreadcrumbList`
+  schema** (Home > Blog > Article) — structured data only, no new visible
+  breadcrumb UI (that's a separate, larger design decision if wanted later).
 - **OG/Twitter cards**: correct and per-article (real hero image + dimensions),
   not falling back to a generic site image.
 - **Author**: always `Organization`, no fabricated personal bylines — correct
@@ -152,14 +161,19 @@ posts identically:
 
 ## 6. Anomaly Found: Publish-Date Ordering
 
-Article #19 (`what-is-a-pre-screened-participant-referral`) carries
+Article #19 (`what-is-a-pre-screened-participant-referral`) carried
 `publishDate: 2026-09-22` — a leftover from the original 15-day-cadence
 scheme, set *before* the user corrected the cadence to consecutive daily
-dates starting at Article #20 (2026-09-08). Result: #19 currently sorts
-*after* #20–#24 on `/blog` and in the sitemap `lastmod`, even though several
-of those later articles' Related Reading treats #19 as an already-existing
-prior article. Flagging for a decision, not changing it — this touches a
-date, not a URL, but still shouldn't move without confirmation.
+dates starting at Article #20 (2026-09-08). Result: #19 sorted *after*
+#20–#24 on `/blog` and in the sitemap `lastmod`, even though several of
+those later articles' Related Reading treats #19 as an already-existing
+prior article.
+
+**Executed (2026-09-13, with explicit sign-off):** corrected to
+`2026-09-07` — same day as Article #18, immediately before #20, restoring
+correct reading order. This is a metadata correction of a scheduling
+mistake, not the "changing dates to fake freshness" the brief warns
+against; only this one date field changed.
 
 ## 7. Service-Page Mapping (as the site actually is today)
 
@@ -168,11 +182,17 @@ service cards, but their CTAs point to homepage anchors, and two of them
 (`Clinical Research Marketing` and `Recruitment Creative & Content`) both
 point to the same `#contact` anchor rather than distinct sections. Only
 `#business-growth` and `#patient-recruitment` are real distinct anchors.
-Every blog post's bottom CTA (`BlogPostLayout.astro`) is currently identical
+Every blog post's bottom CTA (`BlogPostLayout.astro`) used to be identical
 across all 24 articles: "Request a Consultation" → `/#contact`, regardless
-of cluster. A cluster-aware CTA (or at least a contextual in-body link to the
-most relevant anchor) is a real, low-risk improvement — listed as an
-On-Page recommendation, not yet built.
+of cluster.
+
+**Executed (2026-09-13):** the CTA now varies by the post's existing
+`category` frontmatter field (not the finer 7-cluster taxonomy, since that
+isn't a real data field yet and category already maps cleanly onto the 2
+real dedicated anchors): `Patient Recruitment` → `/#patient-recruitment`,
+`Business Growth` → `/#business-growth`, everything else keeps the original
+`/#contact` CTA. No new frontmatter added; no anchor invented that didn't
+already exist on the homepage.
 
 ## 8. Content Gaps (for future article planning)
 
