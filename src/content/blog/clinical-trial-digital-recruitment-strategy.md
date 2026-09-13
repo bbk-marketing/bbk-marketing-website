@@ -200,7 +200,7 @@ That is the foundation of a stronger clinical trial recruitment strategy.
 - [Why Research Sites Should Stop Measuring Recruitment Success by Leads Alone](/blog/clinical-trial-recruitment-metrics-beyond-leads)
 - [IRB Review and Clinical Trial Advertising: What Marketing Teams Should Understand](/blog/irb-review-clinical-trial-advertising)
 - [What Is Clinical Research Marketing? A Practical Guide for Research Sites and CROs](/blog/what-is-clinical-research-marketing)
-- [Geographic Targeting for Clinical Trial Recruitment: How Far Should a Campaign Reach?](/blog/geographic-targeting-clinical-trial-recruitment)
+- [What Should a Clinical Research Site Look for in a Recruitment Marketing Partner?](/blog/clinical-trial-recruitment-marketing-partner)
 
 ## Frequently Asked Questions
 

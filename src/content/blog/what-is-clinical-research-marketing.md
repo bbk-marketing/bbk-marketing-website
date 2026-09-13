@@ -250,13 +250,8 @@ That is why clinical research marketing should not be reduced to advertising. It
 
 - [What Makes Clinical Research Marketing Different From Traditional Healthcare Marketing?](/blog/clinical-research-marketing-vs-healthcare-marketing)
 - [How to Build a Digital Recruitment Strategy for a Clinical Research Study](/blog/clinical-trial-digital-recruitment-strategy)
-- [English vs Spanish Clinical Trial Campaigns: Why Translation Alone Is Not Enough](/blog/spanish-clinical-trial-recruitment-localization)
-- [Meta Ads for Clinical Trial Recruitment: What Research Sites Need to Know](/blog/meta-ads-clinical-trial-recruitment)
 - [What Should a Clinical Research Site Look for in a Recruitment Marketing Partner?](/blog/clinical-trial-recruitment-marketing-partner)
 - [Multi-Site Clinical Trial Recruitment: Centralized Campaigns vs Site-by-Site Advertising](/blog/multi-site-clinical-trial-recruitment-centralized-vs-local)
-- [From Lead Generation to Preliminary Pre-Screening: The Evolution of Clinical Research Recruitment](/blog/clinical-trial-pre-screening-recruitment-evolution)
-- [The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns](/blog/clinical-trial-recruitment-kpis)
-- [Human Follow-Up vs Automation in Clinical Research Recruitment](/blog/human-vs-automation-clinical-trial-recruitment)
 - [Lead Generation vs Participant Recruitment: Why the Difference Matters](/blog/lead-generation-vs-clinical-trial-participant-recruitment)
 
 ## Frequently Asked Questions

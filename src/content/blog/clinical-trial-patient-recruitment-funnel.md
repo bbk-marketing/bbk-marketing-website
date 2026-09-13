@@ -191,12 +191,8 @@ Answering those questions turns digital advertising into a genuine clinical tria
 
 ## Related Reading
 
-- [What Makes Clinical Research Marketing Different From Traditional Healthcare Marketing?](/blog/clinical-research-marketing-vs-healthcare-marketing)
 - [Why Research Sites Should Stop Measuring Recruitment Success by Leads Alone](/blog/clinical-trial-recruitment-metrics-beyond-leads)
-- [How to Build a Digital Recruitment Strategy for a Clinical Research Study](/blog/clinical-trial-digital-recruitment-strategy)
-- [From Lead Generation to Preliminary Pre-Screening: The Evolution of Clinical Research Recruitment](/blog/clinical-trial-pre-screening-recruitment-evolution)
 - [The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns](/blog/clinical-trial-recruitment-kpis)
-- [Why Participant Experience Matters Before the First Research Site Call](/blog/participant-experience-clinical-trial-recruitment)
 - [Lead Generation vs Participant Recruitment: Why the Difference Matters](/blog/lead-generation-vs-clinical-trial-participant-recruitment)
 - [What Is a Pre-Screened Participant Referral?](/blog/what-is-a-pre-screened-participant-referral)
 - [How to Build a Clinical Trial Recruitment Funnel](/blog/how-to-build-a-clinical-trial-recruitment-funnel)

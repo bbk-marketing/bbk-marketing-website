@@ -1,7 +1,7 @@
 ---
 title: "What Is a Pre-Screened Participant Referral?"
 description: "Learn what a pre-screened participant referral is, how it differs from a lead, and why Research Sites should separate preliminary fit from final eligibility."
-publishDate: 2026-09-22
+publishDate: 2026-09-07
 category: "Patient Recruitment"
 tags:
   - "pre-screened participant referral"

@@ -285,18 +285,11 @@ That is a much more connected recruitment system. And it shifts the marketing ob
 
 ## Related Reading
 
-- [Clinical Trial Patient Recruitment: From Advertising Clicks to Real Participant Opportunities](/blog/clinical-trial-patient-recruitment-funnel)
-- [Why Research Sites Should Stop Measuring Recruitment Success by Leads Alone](/blog/clinical-trial-recruitment-metrics-beyond-leads)
-- [How Research Sites Can Improve Participant Recruitment Without Increasing Ad Spend](/blog/improve-clinical-trial-recruitment-without-more-ad-spend)
-- [The Hidden Cost of Slow Follow-Up in Clinical Research Recruitment](/blog/slow-follow-up-clinical-trial-recruitment)
-- [Multi-Site Clinical Trial Recruitment: Centralized Campaigns vs Site-by-Site Advertising](/blog/multi-site-clinical-trial-recruitment-centralized-vs-local)
-- [The Metrics That Actually Matter in Clinical Trial Recruitment Campaigns](/blog/clinical-trial-recruitment-kpis)
-- [Why Participant Experience Matters Before the First Research Site Call](/blog/participant-experience-clinical-trial-recruitment)
+- [Clinical Research Recruitment Videos: Human Presenter, Voice-Over or AI Avatar?](/blog/clinical-trial-recruitment-videos-human-vs-ai)
 - [Human Follow-Up vs Automation in Clinical Research Recruitment](/blog/human-vs-automation-clinical-trial-recruitment)
-- [What Is Clinical Research Marketing? A Practical Guide for Research Sites and CROs](/blog/what-is-clinical-research-marketing)
-- [Lead Generation vs Participant Recruitment: Why the Difference Matters](/blog/lead-generation-vs-clinical-trial-participant-recruitment)
 - [What Is a Pre-Screened Participant Referral?](/blog/what-is-a-pre-screened-participant-referral)
 - [How to Build a Clinical Trial Recruitment Funnel](/blog/how-to-build-a-clinical-trial-recruitment-funnel)
+- [How to Measure Recruitment Performance by Research Site](/blog/how-to-measure-recruitment-performance-by-research-site)
 
 ## Frequently Asked Questions
 

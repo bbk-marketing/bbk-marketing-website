@@ -262,17 +262,10 @@ Clinical trial recruitment campaigns should not be measured by a single number. 
 
 ## Related Reading
 
-- [Clinical Trial Patient Recruitment: From Advertising Clicks to Real Participant Opportunities](/blog/clinical-trial-patient-recruitment-funnel)
 - [Why Research Sites Should Stop Measuring Recruitment Success by Leads Alone](/blog/clinical-trial-recruitment-metrics-beyond-leads)
-- [How Research Sites Can Improve Participant Recruitment Without Increasing Ad Spend](/blog/improve-clinical-trial-recruitment-without-more-ad-spend)
-- [The Hidden Cost of Slow Follow-Up in Clinical Research Recruitment](/blog/slow-follow-up-clinical-trial-recruitment)
-- [From Lead Generation to Preliminary Pre-Screening: The Evolution of Clinical Research Recruitment](/blog/clinical-trial-pre-screening-recruitment-evolution)
-- [Human Follow-Up vs Automation in Clinical Research Recruitment](/blog/human-vs-automation-clinical-trial-recruitment)
-- [What Is Clinical Research Marketing? A Practical Guide for Research Sites and CROs](/blog/what-is-clinical-research-marketing)
 - [Lead Generation vs Participant Recruitment: Why the Difference Matters](/blog/lead-generation-vs-clinical-trial-participant-recruitment)
 - [What Is a Pre-Screened Participant Referral?](/blog/what-is-a-pre-screened-participant-referral)
 - [How to Build a Clinical Trial Recruitment Funnel](/blog/how-to-build-a-clinical-trial-recruitment-funnel)
-- [Geographic Targeting for Clinical Trial Recruitment: How Far Should a Campaign Reach?](/blog/geographic-targeting-clinical-trial-recruitment)
 - [How to Measure Recruitment Performance by Research Site](/blog/how-to-measure-recruitment-performance-by-research-site)
 
 ## Frequently Asked Questions

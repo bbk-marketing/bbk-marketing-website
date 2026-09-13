@@ -205,13 +205,9 @@ When those answers are yes, bilingual clinical research marketing moves beyond t
 
 ## Related Reading
 
-- [What Makes Clinical Research Marketing Different From Traditional Healthcare Marketing?](/blog/clinical-research-marketing-vs-healthcare-marketing)
-- [Clinical Trial Patient Recruitment: From Advertising Clicks to Real Participant Opportunities](/blog/clinical-trial-patient-recruitment-funnel)
-- [How to Build a Digital Recruitment Strategy for a Clinical Research Study](/blog/clinical-trial-digital-recruitment-strategy)
 - [Meta Ads for Clinical Trial Recruitment: What Research Sites Need to Know](/blog/meta-ads-clinical-trial-recruitment)
 - [Clinical Research Recruitment Videos: Human Presenter, Voice-Over or AI Avatar?](/blog/clinical-trial-recruitment-videos-human-vs-ai)
 - [Why Participant Experience Matters Before the First Research Site Call](/blog/participant-experience-clinical-trial-recruitment)
-- [What Is Clinical Research Marketing? A Practical Guide for Research Sites and CROs](/blog/what-is-clinical-research-marketing)
 - [Preparing Recruitment Materials for IRB Review: A Practical Guide for Marketing Teams](/blog/preparing-recruitment-materials-for-irb-review)
 - [Translation vs Localization in Clinical Trial Advertising](/blog/translation-vs-localization-clinical-trial-advertising)
 
