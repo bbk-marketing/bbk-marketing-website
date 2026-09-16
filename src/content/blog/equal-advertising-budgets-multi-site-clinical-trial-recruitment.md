@@ -17,7 +17,7 @@ heroImage: "/img/blog/equal-advertising-budgets-multi-site-clinical-trial-recrui
 heroImageAlt: "A CRO budget planning room where a team reviews a Research Site advertising allocation dashboard comparing population, cost, referral rate, and recommended budget across five Sites."
 heroImageWidth: 1734
 heroImageHeight: 907
-draft: true
+draft: false
 ---
 
 A clinical trial has six Research Sites. The centralized recruitment budget is $60,000. The simplest allocation is obvious: $10,000 per Site. It looks organized, it looks fair, and it is easy to explain. But it may not be the most efficient way to recruit participants.

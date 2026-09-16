@@ -17,7 +17,7 @@ heroImage: "/img/blog/crm-for-clinical-trial-recruitment.png"
 heroImageAlt: "A recruitment CRM dashboard showing the participant funnel from inquiries to enrollment, a participants table with statuses, and a leads-by-source breakdown, with a research team reviewing it in the background."
 heroImageWidth: 1734
 heroImageHeight: 907
-draft: true
+draft: false
 ---
 
 A Research Site generates participant inquiries from Meta Ads, Google, its own website, physician referrals, community outreach, Site databases, and centralized CRO campaigns. Then the information starts spreading. Some leads sit in email. Others live in spreadsheets. Others are inside Meta itself. A coordinator keeps notes in another system, and a recruiter tracks calls manually. When the Site Director asks "what happened to the 120 participants we received last month?", nobody can answer without opening several files.
