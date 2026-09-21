@@ -1,0 +1,36 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import { caseStudies } from '../data/caseStudies';
+
+// Renders nothing until real, approved case-study data exists — see
+// src/data/caseStudies.ts. No placeholder/fake results are ever shown.
+const approved = caseStudies.filter((c) => c.permissionStatus === 'approved');
+---
+
+{approved.length > 0 && (
+  <section class="case-studies section section-alt" id="case-studies">
+    <div class="container">
+      <SectionHeader eyebrow="Results" title="Recruitment Results by Study" center />
+      <div class="case-grid">
+        {approved.map((c) => (
+          <div class="case-card" data-reveal>
+            {c.clientLogo && <img src={c.clientLogo} alt={c.clientName ?? ''} class="case-logo" />}
+            <p class="case-area">{c.therapeuticArea}</p>
+            <p class="case-result">{c.verifiedResult}</p>
+            <p class="case-meta">{c.geography} &middot; {c.duration}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<style>
+  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media (max-width:900px){.case-grid{grid-template-columns:1fr}}
+  .case-card{background:var(--white);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:26px}
+  .case-logo{height:28px;width:auto;margin-bottom:14px}
+  .case-area{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--gray-500);margin-bottom:8px}
+  .case-result{font-size:1.02rem;font-weight:600;margin-bottom:8px}
+  .case-meta{font-size:.86rem;color:var(--gray-500)}
+</style>

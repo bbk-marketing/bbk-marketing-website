@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import PageCTA from '../components/PageCTA.astro';
+import { services } from '../data/services';
+
+const growth = services.find((s) => s.id === 'business-growth-digital-strategy')!;
+---
+
+<Layout
+  title="Marketing for Research Sites | BBK Marketing Solutions"
+  description="Positioning, digital infrastructure, and business-growth strategy for Clinical Research Sites that want to grow beyond a single recruitment campaign."
+>
+  <section class="svc-hero section">
+    <div class="container svc-hero-inner">
+      <p class="eyebrow">Research Site Growth</p>
+      <h1>Marketing for Research Sites, Beyond a Single Campaign</h1>
+      <p class="svc-lead">{growth.description}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container svc-body">
+      <p>
+        Recruitment advertising fills one Study. A Research Site's market position, website, brand, and
+        operational infrastructure carry across every Study that follows. BBK works with Research Sites,
+        SMOs, and multi-Site networks on the business side of growth — not just the next campaign.
+      </p>
+      <ul class="svc-bullets">
+        {growth.bullets.map((b) => <li>{b}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <SectionHeader eyebrow="Why It Matters" title="A Site Is a Business, Not Just a Study" center />
+      <p class="svc-note">
+        Sites that invest in positioning and infrastructure once tend to recruit more efficiently on every
+        Study after — a stronger website, clearer brand, and CRM/automation foundation make each new
+        recruitment campaign faster to launch and easier to track.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container svc-links">
+      <p>Related reading:</p>
+      <ul>
+        <li><a href="/blog/clinical-trial-recruitment-marketing-partner">Choosing a Clinical Trial Recruitment Marketing Partner</a></li>
+        <li><a href="/clinical-research-marketing">Clinical Research Marketing campaigns →</a></li>
+        <li><a href="/research-sites">See how BBK supports Research Sites →</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <PageCTA
+    heading="Discuss Business Growth for Your Site"
+    body="Talk with BBK about positioning, digital infrastructure, and multi-Study growth for your Research Site or network."
+  />
+</Layout>
+
+<style>
+  .svc-hero{padding-top:calc(var(--header-h) + 64px);padding-bottom:var(--space-7)}
+  .svc-hero-inner{max-width:760px}
+  .svc-hero h1{font-size:var(--fs-h1);margin-bottom:18px}
+  .svc-lead{font-size:var(--fs-lead);line-height:1.7;color:var(--text-secondary);max-width:620px}
+
+  .svc-body{max-width:720px}
+  .svc-body p{line-height:1.75;margin-bottom:20px}
+  .svc-bullets{display:flex;flex-direction:column;gap:10px;padding-left:22px}
+  .svc-bullets li{list-style:disc;line-height:1.6;color:var(--text-secondary)}
+
+  .svc-note{max-width:680px;margin-inline:auto;text-align:center;line-height:1.7;color:var(--text-secondary)}
+
+  .svc-links{max-width:720px}
+  .svc-links p{font-weight:700;margin-bottom:10px}
+  .svc-links ul{display:flex;flex-direction:column;gap:8px}
+  .svc-links a{color:var(--accent-strong);font-weight:600}
+  .svc-links a:hover{text-decoration:underline}
+</style>

@@ -1,0 +1,32 @@
+---
+export interface Props {
+  /** Set true when placed inside a dark section (e.g. right after a navy CTA block). */
+  dark?: boolean;
+}
+const { dark = false } = Astro.props;
+---
+
+<div class:list={['saq-promo', { dark }]} data-reveal>
+  <div class="saq-promo-text">
+    <h3>How Strong Is Your Current Recruitment Strategy?</h3>
+    <p>
+      Take the BBK Clinical Research Recruitment Self-Assessment and identify areas where your Site may be
+      losing recruitment opportunities.
+    </p>
+  </div>
+  <a href="/self-assessment" class:list={['btn', dark ? 'btn-ghost-light' : 'btn-outline']}>Take the Assessment</a>
+</div>
+
+<style>
+  .saq-promo{
+    display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+    background:var(--bg-alt);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);
+    padding:26px 30px;
+  }
+  .saq-promo.dark{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.14)}
+  .saq-promo-text h3{font-size:1.05rem;margin-bottom:6px}
+  .saq-promo.dark h3{color:var(--white)}
+  .saq-promo-text p{font-size:.9rem;line-height:1.55;color:var(--text-secondary);max-width:480px}
+  .saq-promo.dark p{color:var(--gray-300)}
+  .saq-promo .btn{flex-shrink:0}
+</style>

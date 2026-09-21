@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import PageCTA from '../components/PageCTA.astro';
+import SelfAssessmentPromo from '../components/SelfAssessmentPromo.astro';
+import { site } from '../data/site';
+import { services } from '../data/services';
+import { participantJourney } from '../data/participantJourney';
+
+const service = services.find((s) => s.id === 'participant-recruitment-rps')!;
+---
+
+<Layout
+  title={`Participant Recruitment — ${site.rps.shortName} | BBK Marketing Solutions`}
+  description="BBK Research Participant Solutions helps research organizations move beyond traditional advertising leads through registration, engagement, preliminary pre-screening, human follow-up, and structured referral workflows."
+>
+  <section class="svc-hero section">
+    <div class="container svc-hero-inner">
+      <p class="eyebrow">{site.rps.shortName}</p>
+      <h1>Advertising Gets Attention. Recruitment Requires More.</h1>
+      <p class="svc-lead">{service.description}</p>
+      <a href={site.rps.url} target="_blank" rel="noopener" class="btn btn-primary">Explore {site.rps.shortName}</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container svc-body">
+      <p>
+        {site.rps.name} ({site.rps.shortName}) is a participant recruitment platform and service operated by
+        {site.legalName}. It helps research organizations move beyond raw advertising leads through a
+        structured recruitment workflow — participant registration, engagement, preliminary pre-screening,
+        human follow-up, and structured referral to the Research Site.
+      </p>
+      <div class="svc-flow" aria-label="Participant recruitment journey">
+        {participantJourney.map((step, i) => (
+          <>
+            <span class="svc-flow-step">{step}</span>
+            {i < participantJourney.length - 1 && <span class="svc-flow-arrow" aria-hidden="true">→</span>}
+          </>
+        ))}
+      </div>
+      <p class="svc-flow-note">
+        Final Study-specific screening, eligibility determination, and enrollment remain the responsibility
+        of the applicable Research Site and research team.
+      </p>
+      <ul class="svc-bullets">
+        {service.bullets.map((b) => <li>{b}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <SectionHeader eyebrow="Not a Marketplace" title="Participant Referrals, Not Participant Sales" center />
+      <p class="svc-note">
+        BBK never sells participant medical or health information, and {site.rps.shortName} does not
+        determine final clinical eligibility. Participant-level information is made available only through
+        an authorized recruitment or referral workflow, to the Research Organization or Site associated
+        with that referral.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container svc-links">
+      <p>Related reading:</p>
+      <ul>
+        <li><a href="/blog/what-is-a-pre-screened-participant-referral">What Is a Pre-Screened Participant Referral?</a></li>
+        <li><a href="/blog/how-to-build-a-clinical-trial-recruitment-funnel">How to Build a Clinical Trial Recruitment Funnel</a></li>
+        <li><a href="/multi-site-recruitment">Participant recruitment across multiple Sites →</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <PageCTA
+    heading="Talk to BBK About Participant Recruitment"
+    body="Discuss your Study's recruitment goals and how BBK RPS approaches pre-screening and referrals."
+  />
+
+  <section class="section">
+    <div class="container">
+      <SelfAssessmentPromo />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .svc-hero{padding-top:calc(var(--header-h) + 64px);padding-bottom:var(--space-7)}
+  .svc-hero-inner{max-width:760px}
+  .svc-hero h1{font-size:var(--fs-h1);margin-bottom:18px}
+  .svc-lead{font-size:var(--fs-lead);line-height:1.7;color:var(--text-secondary);max-width:620px;margin-bottom:28px}
+
+  .svc-body{max-width:720px}
+  .svc-body p{line-height:1.75;margin-bottom:20px}
+  .svc-bullets{display:flex;flex-direction:column;gap:10px;padding-left:22px;margin-top:20px}
+  .svc-bullets li{list-style:disc;line-height:1.6;color:var(--text-secondary)}
+
+  .svc-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:22px 0}
+  .svc-flow-step{
+    font-size:.78rem;font-weight:700;color:var(--text-secondary);
+    background:var(--bg-alt);border:1px solid var(--border-subtle);border-radius:var(--radius-sm);
+    padding:6px 11px;
+  }
+  .svc-flow-arrow{color:var(--gray-400)}
+  .svc-flow-note{font-size:.86rem;color:var(--gray-500);font-style:italic}
+
+  .svc-note{max-width:680px;margin-inline:auto;text-align:center;line-height:1.7;color:var(--text-secondary)}
+
+  .svc-links{max-width:720px}
+  .svc-links p{font-weight:700;margin-bottom:10px}
+  .svc-links ul{display:flex;flex-direction:column;gap:8px}
+  .svc-links a{color:var(--accent-strong);font-weight:600}
+  .svc-links a:hover{text-decoration:underline}
+</style>

@@ -98,7 +98,10 @@ const serviceInterests = [
       </p>
       <div class="form-success" id="formSuccess">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-        <span id="formSuccessText">Thank you. We've received your request and will follow up shortly.</span>
+        <span id="formSuccessText">
+          Thank you. Our team has received your request. If you would like to discuss your recruitment needs
+          sooner, <a href={`tel:${site.phoneHref}`}>contact us directly</a> or use the chat below.
+        </span>
       </div>
       <p class="form-error" id="formError" hidden>
         Something went wrong submitting your request. Please try again, or email us directly at
@@ -177,7 +180,6 @@ const serviceInterests = [
 <script>
   const form = document.getElementById('consultForm') as HTMLFormElement | null;
   const success = document.getElementById('formSuccess');
-  const successText = document.getElementById('formSuccessText');
   const errorEl = document.getElementById('formError');
   const submitBtn = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
 
@@ -216,7 +218,6 @@ const serviceInterests = [
       });
       if (!res.ok) throw new Error('Submission failed');
 
-      if (successText) successText.textContent = "Thank you. We've received your request and will follow up shortly.";
       success?.classList.add('show');
       form.reset();
       setTimeout(() => success?.classList.remove('show'), 7000);

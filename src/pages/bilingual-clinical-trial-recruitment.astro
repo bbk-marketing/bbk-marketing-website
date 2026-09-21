@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import PageCTA from '../components/PageCTA.astro';
+import { services } from '../data/services';
+
+const creative = services.find((s) => s.id === 'recruitment-creative-content')!;
+---
+
+<Layout
+  title="Bilingual Clinical Trial Recruitment | BBK Marketing Solutions"
+  description="English and Spanish recruitment campaigns and materials for Clinical Research — bilingual creative, translation coordination, and Hispanic/Latino participant outreach."
+>
+  <section class="svc-hero section">
+    <div class="container svc-hero-inner">
+      <p class="eyebrow">Bilingual Recruitment</p>
+      <h1>Recruitment Materials That Actually Speak to Participants</h1>
+      <p class="svc-lead">{creative.description}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container svc-body">
+      <p>
+        A direct translation is not the same as a message that resonates. BBK produces English and Spanish
+        recruitment materials as distinct campaigns — written, scripted, and cast for how each audience
+        actually responds, not machine-translated from one language into the other after the fact.
+      </p>
+      <ul class="svc-bullets">
+        <li>Bilingual materials (English / Spanish)</li>
+        <li>Translation coordination, not literal translation</li>
+        <li>Video production and voice-over in both languages</li>
+        <li>Scripts and advertising copy written per audience</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <SectionHeader eyebrow="Why It Matters" title="Language Is Part of the Recruitment Funnel, Not an Afterthought" center />
+      <p class="svc-note">
+        Preferred language can influence everything downstream — response rate, pre-screen completion, and
+        which Research Site a participant is best routed to. Treating bilingual recruitment as a core part
+        of campaign strategy, not a translated afterthought, changes recruitment outcomes.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container svc-links">
+      <p>Related reading:</p>
+      <ul>
+        <li><a href="/blog/spanish-clinical-trial-recruitment-localization">Spanish Clinical Trial Recruitment Localization</a></li>
+        <li><a href="/blog/translation-vs-localization-clinical-trial-advertising">Translation vs. Localization in Clinical Trial Advertising</a></li>
+        <li><a href="/clinical-research-marketing">Clinical Research Marketing campaigns →</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <PageCTA
+    heading="Discuss Bilingual Recruitment Materials"
+    body="Talk with BBK about English/Spanish creative for your Study's recruitment campaign."
+  />
+</Layout>
+
+<style>
+  .svc-hero{padding-top:calc(var(--header-h) + 64px);padding-bottom:var(--space-7)}
+  .svc-hero-inner{max-width:760px}
+  .svc-hero h1{font-size:var(--fs-h1);margin-bottom:18px}
+  .svc-lead{font-size:var(--fs-lead);line-height:1.7;color:var(--text-secondary);max-width:620px}
+
+  .svc-body{max-width:720px}
+  .svc-body p{line-height:1.75;margin-bottom:20px}
+  .svc-bullets{display:flex;flex-direction:column;gap:10px;padding-left:22px}
+  .svc-bullets li{list-style:disc;line-height:1.6;color:var(--text-secondary)}
+
+  .svc-note{max-width:680px;margin-inline:auto;text-align:center;line-height:1.7;color:var(--text-secondary)}
+
+  .svc-links{max-width:720px}
+  .svc-links p{font-weight:700;margin-bottom:10px}
+  .svc-links ul{display:flex;flex-direction:column;gap:8px}
+  .svc-links a{color:var(--accent-strong);font-weight:600}
+  .svc-links a:hover{text-decoration:underline}
+</style>

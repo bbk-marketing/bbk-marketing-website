@@ -13,7 +13,7 @@ export interface NavItem {
 export const navItems: NavItem[] = [
   { label: 'Clinical Research Marketing', href: '/#clinical-research-marketing' },
   { label: 'Business Growth', href: '/#business-growth' },
-  { label: 'Patient Recruitment', href: '/#patient-recruitment' },
+  { label: 'Participant Recruitment', href: '/#patient-recruitment' },
   { label: 'Our Process', href: '/#our-process' },
   { label: 'About BBK', href: '/#about' },
   { label: 'Blog', href: '/blog' },

@@ -3,6 +3,7 @@ import Layout from './Layout.astro';
 import { site } from '../data/site';
 import { formatDate, estimateReadingTime } from '../utils/date';
 import { extractFaqs } from '../utils/faq';
+import SelfAssessmentPromo from '../components/SelfAssessmentPromo.astro';
 import type { CollectionEntry } from 'astro:content';
 
 export interface Props {
@@ -24,21 +25,24 @@ const {
 } = post.data;
 const readingTime = estimateReadingTime(post.body ?? '');
 
-// The only 3 real anchor sections that exist on the homepage today (see
-// BusinessGrowthSection.astro, CTAConsultationForm.astro,
-// PatientRecruitmentSection.astro) — "Clinical Research Marketing" and
-// "Industry Insights" have no dedicated section of their own yet, so they
-// fall back to the general consultation form rather than a mismatched anchor.
-const ctaByCategory: Record<string, { href: string; heading: string; body: string }> = {
+// "Clinical Research Marketing" and "Industry Insights" have no single
+// dedicated destination that fits every article in those categories, so
+// they fall back to the general consultation form rather than a mismatched
+// link. The other two now route to their dedicated pages (see
+// src/pages/participant-recruitment.astro, research-site-marketing.astro)
+// instead of the homepage anchors they used before those pages existed.
+const ctaByCategory: Record<string, { href: string; heading: string; body: string; label: string }> = {
   'Patient Recruitment': {
-    href: '/#patient-recruitment',
+    href: '/participant-recruitment',
     heading: 'Ready to talk about participant recruitment?',
     body: 'Talk with BBK about your Study, recruitment goals, and how BBK RPS approaches pre-screening and referrals.',
+    label: 'Explore Participant Recruitment',
   },
   'Business Growth': {
-    href: '/#business-growth',
+    href: '/research-site-marketing',
     heading: 'Ready to talk about growing your organization?',
     body: 'Talk with BBK about positioning, multi-Site strategy, and business development for your Sites or network.',
+    label: 'Explore Business Growth',
   },
 };
 const cta =
@@ -46,6 +50,7 @@ const cta =
     href: '/#contact',
     heading: 'Ready to talk about your Study?',
     body: 'Talk with BBK about your recruitment objectives, participating Sites and geographic requirements.',
+    label: 'Request a Consultation',
   };
 
 const jsonLd = {
@@ -132,8 +137,14 @@ const faqJsonLd = faqs.length
       <div class="post-cta">
         <h3>{cta.heading}</h3>
         <p>{cta.body}</p>
-        <a href={cta.href} class="btn btn-primary">Request a Consultation</a>
+        <a href={cta.href} class="btn btn-primary">{cta.label}</a>
       </div>
+
+      {(category === 'Patient Recruitment' || category === 'Business Growth') && (
+        <div class="post-saq-promo">
+          <SelfAssessmentPromo />
+        </div>
+      )}
     </div>
   </article>
 </Layout>
@@ -191,4 +202,5 @@ const faqJsonLd = faqs.length
   }
   .post-cta h3{font-size:1.3rem;margin-bottom:12px;color:var(--white)}
   .post-cta p{color:var(--gray-300);margin-bottom:26px;max-width:440px;margin-inline:auto}
+  .post-saq-promo{margin-top:var(--space-6)}
 </style>

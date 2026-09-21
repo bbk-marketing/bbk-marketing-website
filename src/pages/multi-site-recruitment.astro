@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import PageCTA from '../components/PageCTA.astro';
+import { sampleSites } from '../data/multiSite';
+---
+
+<Layout
+  title="Multi-Site Recruitment | BBK Marketing Solutions"
+  description="Centralized recruitment campaigns across multiple participating Research Sites, with performance tracked by geography and location."
+>
+  <section class="svc-hero section">
+    <div class="container svc-hero-inner">
+      <p class="eyebrow">Multi-Site Recruitment</p>
+      <h1>One Recruitment Strategy. Multiple Research Sites.</h1>
+      <p class="svc-lead">
+        BBK can support centralized recruitment campaigns across multiple participating Sites while
+        tracking performance by geography and location.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container svc-body">
+      <p>
+        Multi-Site Studies rarely recruit evenly. A Site in a large metropolitan market has a different
+        recruitment opportunity than a Site in a smaller one — different population, different advertising
+        costs, different referral conversion. BBK's centralized approach lets one team see recruitment
+        across every participating Site at once, rather than running disconnected campaigns Site by Site.
+      </p>
+      <ul class="svc-bullets">
+        <li>Centralized campaign management</li>
+        <li>Geographic recruitment by Site territory</li>
+        <li>Site-level performance visibility</li>
+        <li>A scalable multi-location strategy</li>
+      </ul>
+      <p class="svc-sites-note">Example participating Sites (illustrative): {sampleSites.join(', ')}.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <SectionHeader eyebrow="How It Works" title="Budget That Follows Opportunity, Not Just Headcount" center />
+      <p class="svc-note">
+        Equal advertising budgets across Sites do not create equal recruitment opportunity — geography,
+        referral conversion, and Site capacity all vary. BBK's centralized model can expand strong markets,
+        pause saturated ones, and rebalance spend as real performance data comes in.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container svc-links">
+      <p>Related reading:</p>
+      <ul>
+        <li><a href="/blog/multi-site-clinical-trial-recruitment-centralized-vs-local">Multi-Site Clinical Trial Recruitment: Centralized Campaigns vs Site-by-Site Advertising</a></li>
+        <li><a href="/blog/equal-advertising-budgets-multi-site-clinical-trial-recruitment">Why Equal Advertising Budgets Across Research Sites May Be Inefficient</a></li>
+        <li><a href="/blog/how-to-measure-recruitment-performance-by-research-site">How to Measure Recruitment Performance by Research Site</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <PageCTA
+    heading="Discuss a Multi-Site Campaign"
+    body="Talk with BBK about your Study's participating Sites, geography, and recruitment goals."
+  />
+</Layout>
+
+<style>
+  .svc-hero{padding-top:calc(var(--header-h) + 64px);padding-bottom:var(--space-7)}
+  .svc-hero-inner{max-width:760px}
+  .svc-hero h1{font-size:var(--fs-h1);margin-bottom:18px}
+  .svc-lead{font-size:var(--fs-lead);line-height:1.7;color:var(--text-secondary);max-width:620px}
+
+  .svc-body{max-width:720px}
+  .svc-body p{line-height:1.75;margin-bottom:20px}
+  .svc-bullets{display:flex;flex-direction:column;gap:10px;padding-left:22px;margin-bottom:20px}
+  .svc-bullets li{list-style:disc;line-height:1.6;color:var(--text-secondary)}
+  .svc-sites-note{font-size:.86rem;color:var(--gray-500);font-style:italic}
+
+  .svc-note{max-width:680px;margin-inline:auto;text-align:center;line-height:1.7;color:var(--text-secondary)}
+
+  .svc-links{max-width:720px}
+  .svc-links p{font-weight:700;margin-bottom:10px}
+  .svc-links ul{display:flex;flex-direction:column;gap:8px}
+  .svc-links a{color:var(--accent-strong);font-weight:600}
+  .svc-links a:hover{text-decoration:underline}
+</style>

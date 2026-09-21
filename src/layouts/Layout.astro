@@ -44,6 +44,14 @@ const jsonLd = {
   description: site.supportMessage,
   email: site.email,
   telephone: site.phoneHref,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: site.addressParts.street,
+    addressLocality: site.addressParts.city,
+    addressRegion: site.addressParts.region,
+    postalCode: site.addressParts.postalCode,
+    addressCountry: 'US',
+  },
   sameAs: [site.social.facebook, site.social.instagram],
 };
 ---

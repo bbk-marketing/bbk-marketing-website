@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import PageCTA from '../components/PageCTA.astro';
+import { services } from '../data/services';
+import { differentiators } from '../data/differentiators';
+
+const service = services.find((s) => s.id === 'clinical-research-marketing')!;
+const relevant = differentiators.filter((d) => ['focus', 'shield', 'message'].includes(d.icon));
+---
+
+<Layout
+  title="Clinical Research Marketing | BBK Marketing Solutions"
+  description="Campaign strategy and digital advertising built specifically for Clinical Research participant recruitment — Meta and Google advertising, geographic targeting, and ongoing optimization."
+>
+  <section class="svc-hero section">
+    <div class="container svc-hero-inner">
+      <p class="eyebrow">Clinical Research Marketing</p>
+      <h1>Campaign Strategy Built for Clinical Research, Not Retrofitted From It</h1>
+      <p class="svc-lead">{service.description}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container svc-body">
+      <p>
+        Most digital advertising strategy is built for e-commerce or local business — conversion funnels
+        designed around a purchase, not a participant's decision to join a Study. BBK builds Clinical
+        Research campaigns from the ground up around how participants and caregivers actually respond,
+        the realities of IRB review, and the geography a Study can realistically recruit from.
+      </p>
+      <ul class="svc-bullets">
+        {service.bullets.map((b) => <li>{b}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <SectionHeader eyebrow="What Makes It Different" title="Clinical Research Requires a Different Approach" center />
+      <div class="svc-diff-grid">
+        {relevant.map((d) => (
+          <div class="svc-diff-card" data-reveal>
+            <h3>{d.title}</h3>
+            <p>{d.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container svc-links">
+      <p>Related reading:</p>
+      <ul>
+        <li><a href="/blog/what-is-clinical-research-marketing">What Is Clinical Research Marketing?</a></li>
+        <li><a href="/blog/meta-ads-clinical-trial-recruitment">Meta Ads for Clinical Trial Recruitment</a></li>
+        <li><a href="/research-sites">Recruitment marketing for Research Sites →</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <PageCTA
+    heading="Discuss a Clinical Research Marketing Campaign"
+    body="Talk with BBK about your Study, recruitment objectives, participating Sites and geographic requirements."
+  />
+</Layout>
+
+<style>
+  .svc-hero{padding-top:calc(var(--header-h) + 64px);padding-bottom:var(--space-7)}
+  .svc-hero-inner{max-width:760px}
+  .svc-hero h1{font-size:var(--fs-h1);margin-bottom:18px}
+  .svc-lead{font-size:var(--fs-lead);line-height:1.7;color:var(--text-secondary);max-width:620px}
+
+  .svc-body{max-width:720px}
+  .svc-body p{line-height:1.75;margin-bottom:24px}
+  .svc-bullets{display:flex;flex-direction:column;gap:10px;padding-left:22px}
+  .svc-bullets li{list-style:disc;line-height:1.6;color:var(--text-secondary)}
+
+  .svc-diff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media (max-width:800px){.svc-diff-grid{grid-template-columns:1fr}}
+  .svc-diff-card{background:var(--white);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:26px}
+  .svc-diff-card h3{font-size:1rem;margin-bottom:8px}
+  .svc-diff-card p{font-size:.9rem;line-height:1.6}
+
+  .svc-links{max-width:720px}
+  .svc-links p{font-weight:700;margin-bottom:10px}
+  .svc-links ul{display:flex;flex-direction:column;gap:8px}
+  .svc-links a{color:var(--accent-strong);font-weight:600}
+  .svc-links a:hover{text-decoration:underline}
+</style>

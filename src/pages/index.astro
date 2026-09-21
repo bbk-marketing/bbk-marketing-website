@@ -17,6 +17,9 @@ import TherapeuticAreasSection from '../components/TherapeuticAreasSection.astro
 import AboutSection from '../components/AboutSection.astro';
 import EcosystemSection from '../components/EcosystemSection.astro';
 import CTAConsultationForm from '../components/CTAConsultationForm.astro';
+import CaseStudiesSection from '../components/CaseStudiesSection.astro';
+import TrustedBySection from '../components/TrustedBySection.astro';
+import SelfAssessmentPromo from '../components/SelfAssessmentPromo.astro';
 ---
 
 <Layout
@@ -32,6 +35,11 @@ import CTAConsultationForm from '../components/CTAConsultationForm.astro';
   <TwoPathsSection />
   <ProcessTimeline />
   <PatientRecruitmentSection />
+  <section class="section">
+    <div class="container">
+      <SelfAssessmentPromo />
+    </div>
+  </section>
   <MultiSiteSection />
   <IRBAwareSection />
   <HumanTechSection />
@@ -39,6 +47,8 @@ import CTAConsultationForm from '../components/CTAConsultationForm.astro';
   <WhoWeServeGrid />
   <TherapeuticAreasSection />
   <AboutSection />
+  <CaseStudiesSection />
   <EcosystemSection />
+  <TrustedBySection />
   <CTAConsultationForm />
 </Layout>

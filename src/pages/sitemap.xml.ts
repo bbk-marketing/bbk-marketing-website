@@ -14,6 +14,13 @@ export const GET: APIRoute = async () => {
 
   const staticUrls: SitemapUrl[] = [
     { loc: '/', changefreq: 'weekly', priority: '1.0' },
+    { loc: '/research-sites', changefreq: 'monthly', priority: '0.9' },
+    { loc: '/clinical-research-marketing', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/participant-recruitment', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/multi-site-recruitment', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/research-site-marketing', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/bilingual-clinical-trial-recruitment', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/self-assessment', changefreq: 'monthly', priority: '0.7' },
     { loc: '/blog', changefreq: 'weekly', priority: '0.8' },
     { loc: '/terms-and-conditions', changefreq: 'yearly', priority: '0.3' },
     { loc: '/privacy-policy', changefreq: 'yearly', priority: '0.3' },

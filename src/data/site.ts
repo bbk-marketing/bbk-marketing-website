@@ -8,10 +8,15 @@ export const site = {
   privacyEmail: 'privacy@bbk-marketing.com',
   phoneDisplay: '+1 (786) 962-9328',
   phoneHref: '+17869629328',
-  privacyPhoneDisplay: '+1 (239) 289-5710',
-  privacyPhoneHref: '+12392895710',
   waHref: 'https://wa.me/17869629328',
-  address: 'Naples, Florida, United States',
+  addressParts: {
+    street: '9990 Coconut Road, Unit 3502',
+    city: 'Estero',
+    region: 'FL',
+    postalCode: '34135',
+    country: 'United States',
+  },
+  address: '9990 Coconut Road, Unit 3502, Estero, FL 34135, United States',
   social: {
     facebook: 'https://www.facebook.com/bbkmarketingsolutions/',
     instagram: 'https://www.instagram.com/bbkmarketingsolutions/',

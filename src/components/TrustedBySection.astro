@@ -1,0 +1,30 @@
+---
+import { trustedLogos } from '../data/trustedLogos';
+
+// Renders nothing until real, approved logos exist — see
+// src/data/trustedLogos.ts. Never a placeholder/fake logo wall.
+const approved = trustedLogos.filter((l) => l.permissionStatus === 'approved');
+---
+
+{approved.length > 0 && (
+  <section class="trusted-by section" aria-label="Trusted by Clinical Research organizations">
+    <div class="container">
+      <p class="trusted-eyebrow">Trusted by Clinical Research Organizations</p>
+      <div class="trusted-grid">
+        {approved.map((l) => (
+          <img src={l.logoSrc} alt={l.organizationName} class="trusted-logo" />
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<style>
+  .trusted-by{padding-top:var(--space-6);padding-bottom:var(--space-6)}
+  .trusted-eyebrow{
+    text-align:center;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+    color:var(--gray-500);margin-bottom:24px;
+  }
+  .trusted-grid{display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap;opacity:.75}
+  .trusted-logo{height:32px;width:auto;filter:grayscale(1)}
+</style>

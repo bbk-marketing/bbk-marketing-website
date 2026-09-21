@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import CTAConsultationForm from '../components/CTAConsultationForm.astro';
+import SelfAssessmentPromo from '../components/SelfAssessmentPromo.astro';
+import CaseStudiesSection from '../components/CaseStudiesSection.astro';
+import { site } from '../data/site';
+import { participantJourney } from '../data/participantJourney';
+
+const challenges = [
+  'Too many raw advertising leads',
+  'Slow participant follow-up',
+  'Internal staff time spent filtering initial inquiries',
+  'Incomplete registrations',
+  'Bilingual recruitment requirements',
+  'Recruitment across defined geographic areas',
+  'Difficulty maintaining recruitment visibility across active studies',
+];
+
+const whyBbk = [
+  'Clinical Research specialization',
+  'IRB-aware recruitment creative',
+  'English/Spanish capability',
+  'Human + technology model',
+  'Recruitment infrastructure',
+  'Business-growth perspective',
+];
+---
+
+<Layout
+  title="Participant Recruitment & Marketing for Research Sites | BBK"
+  description="BBK Marketing Solutions helps Clinical Research Sites attract, engage, and organize potential participants through specialized recruitment marketing and the BBK RPS participant recruitment environment."
+>
+  <section class="rs-hero section">
+    <div class="container rs-hero-inner">
+      <p class="eyebrow">For Clinical Research Sites</p>
+      <h1>Participant Recruitment Built for Research Sites</h1>
+      <p class="rs-lead">
+        BBK Marketing Solutions helps Clinical Research Sites attract, engage, and organize potential
+        participants through specialized recruitment marketing and the {site.rps.shortName} participant
+        recruitment environment.
+      </p>
+      <a href="#rs-contact" class="btn btn-primary">Request a 15-Minute Conversation</a>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <SectionHeader eyebrow="What We See Every Day" title="Recruitment Challenges We Help Solve" center />
+      <p class="rs-challenges-note">
+        Not every Research Site experiences every challenge below — but most face at least a few of them
+        at some point in an active Study.
+      </p>
+      <ul class="rs-challenges-grid">
+        {challenges.map((c) => (
+          <li data-reveal>{c}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container rs-two-col">
+      <div data-reveal>
+        <SectionHeader eyebrow="Clinical Research Marketing" title="Campaigns Built Around Your Study" />
+        <p>
+          BBK develops recruitment campaigns specifically for Clinical Research — campaign strategy, creative
+          development, geographic targeting, bilingual recruitment materials, and ongoing advertising
+          optimization. Every campaign is built with your Study's protocol, geography, and participant
+          population in mind, not adapted from a generic small-business marketing template.
+        </p>
+        <a href="/clinical-research-marketing" class="text-link">Learn more about Clinical Research Marketing →</a>
+      </div>
+      <div data-reveal data-reveal-delay="2">
+        <SectionHeader eyebrow={site.rps.shortName} title="Participant Recruitment, Organized" />
+        <p>
+          Advertising generates interest. {site.rps.shortName} takes it further — participant registration,
+          engagement, preliminary pre-screening, human follow-up, and structured referral to your Site.
+        </p>
+        <div class="rs-flow" aria-label="Participant recruitment journey">
+          {participantJourney.map((step, i) => (
+            <>
+              <span class="rs-flow-step">{step}</span>
+              {i < participantJourney.length - 1 && <span class="rs-flow-arrow" aria-hidden="true">→</span>}
+            </>
+          ))}
+        </div>
+        <p class="rs-flow-note">
+          Final Study-specific screening and eligibility remain with the Research Site.
+        </p>
+        <a href="/participant-recruitment" class="text-link">Explore {site.rps.shortName} →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <SectionHeader eyebrow="Why BBK" title="A Partner That Understands Clinical Research" center />
+      <ul class="rs-why-grid">
+        {whyBbk.map((w) => (
+          <li data-reveal>{w}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <CaseStudiesSection />
+
+  <div id="rs-contact">
+    <CTAConsultationForm />
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <SelfAssessmentPromo />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .rs-hero{padding-top:calc(var(--header-h) + 72px);padding-bottom:var(--space-8);background:var(--navy-900);color:var(--white)}
+  .rs-hero-inner{max-width:720px}
+  .rs-hero .eyebrow{color:var(--cyan-300)}
+  .rs-hero h1{font-size:var(--fs-h1);margin-bottom:20px}
+  .rs-lead{font-size:var(--fs-lead);line-height:1.7;color:var(--gray-300);max-width:600px;margin-bottom:32px}
+
+  .rs-challenges-note{max-width:620px;margin:-8px auto 32px;text-align:center;color:var(--text-secondary)}
+  .rs-challenges-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:16px;list-style:none;max-width:820px;margin-inline:auto;
+  }
+  @media (max-width:700px){.rs-challenges-grid{grid-template-columns:1fr}}
+  .rs-challenges-grid li{
+    background:var(--white);border:1px solid var(--border-subtle);border-radius:var(--radius-md);
+    padding:16px 20px;font-size:.94rem;line-height:1.5;
+  }
+
+  .rs-two-col{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+  @media (max-width:900px){.rs-two-col{grid-template-columns:1fr}}
+  .rs-two-col p{line-height:1.7;margin-bottom:16px}
+  .text-link{font-weight:600;color:var(--accent-strong)}
+  .text-link:hover{text-decoration:underline}
+
+  .rs-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:18px 0}
+  .rs-flow-step{
+    font-size:.78rem;font-weight:700;letter-spacing:.02em;color:var(--text-secondary);
+    background:var(--bg-alt);border:1px solid var(--border-subtle);border-radius:var(--radius-sm);
+    padding:6px 11px;
+  }
+  .rs-flow-arrow{color:var(--gray-400)}
+  .rs-flow-note{font-size:.86rem;color:var(--gray-500);font-style:italic;margin-bottom:16px}
+
+  .rs-why-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;list-style:none;max-width:900px;margin-inline:auto;
+  }
+  @media (max-width:900px){.rs-why-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.rs-why-grid{grid-template-columns:1fr}}
+  .rs-why-grid li{
+    background:var(--white);border:1px solid var(--border-subtle);border-radius:var(--radius-md);
+    padding:16px 20px;text-align:center;font-weight:600;font-size:.92rem;
+  }
+</style>

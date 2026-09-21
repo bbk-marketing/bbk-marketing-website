@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
 import BlogCard from '../../components/BlogCard.astro';
+import SelfAssessmentPromo from '../../components/SelfAssessmentPromo.astro';
 
 const allPosts = await getCollection('blog', ({ data }) => {
   return !data.draft && data.publishDate <= new Date();
@@ -40,6 +41,10 @@ const [featuredPost, ...restPosts] = posts;
           {restPosts.map((post) => <BlogCard post={post} />)}
         </div>
       )}
+
+      <div class="blog-saq-promo">
+        <SelfAssessmentPromo />
+      </div>
     </div>
   </section>
 </Layout>
@@ -51,4 +56,5 @@ const [featuredPost, ...restPosts] = posts;
   .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
   @media (max-width:960px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
   @media (max-width:640px){.blog-grid{grid-template-columns:1fr}}
+  .blog-saq-promo{margin-top:var(--space-8)}
 </style>
