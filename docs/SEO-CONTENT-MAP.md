@@ -21,7 +21,7 @@ Rules that apply to everything in this file:
 
 ## 1. Topic Clusters
 
-Seven clusters, derived from actual article content (not the generic list a
+Eight clusters, derived from actual article content (not the generic list a
 brief might suggest). A cluster with 2 articles is kept separate when the
 topic is strategically distinct (bilingual, regulatory) rather than forced
 into a bigger bucket.
@@ -35,6 +35,7 @@ into a bigger bucket.
 | E | **Participant Communication, Experience & Automation** | 8, 15, 16 | Follow-up speed, pre-Site-call experience, human-vs-AI balance. |
 | F | **Bilingual & Localization Strategy** | 6, 23 | Thin (2 articles) but strategically core to BBK's positioning — priority growth area, not a cluster to merge away. |
 | G | **Regulatory / IRB & Recruitment Materials** | 5, 22 | Thin (2 articles) but compliance stakes justify keeping it distinct rather than diluting into general marketing content. |
+| H | **Research Site Growth & Business Development** | 28 | New (1 article) — the Site-side B2B angle (Sponsor/CRO visibility, positioning, capacity, growth systems) as distinct from participant recruitment. Article 28's brief names six follow-ups and a "Research Site Marketing & Growth" pillar, so this is a planned growth cluster, not a one-off. Maps to the `Business Growth` blog category / `/research-site-marketing` CTA. |
 
 ## 2. Keyword Map
 
@@ -69,6 +70,7 @@ Numbering matches original brief numbering (Article No.N), not publish order.
 | 25 | equal-advertising-budgets-multi-site-clinical-trial-recruitment | multi-site recruitment budget allocation | Informational/Decision-support | C |
 | 26 | crm-for-clinical-trial-recruitment | clinical trial recruitment CRM | Informational/Commercial investigation | D |
 | 27 | ai-in-clinical-trial-participant-recruitment | AI in clinical trial recruitment | Informational/Decision-support | D |
+| 28 | how-to-grow-an-independent-clinical-research-site | grow a clinical research site | Informational/Commercial investigation/Decision-support | H |
 
 Secondary keywords / semantic terms live in each article's frontmatter
 `tags:` array — that list already functions as the secondary-keyword set and
@@ -97,6 +99,14 @@ brief — never auto-merge):
   summarization, routing, analytics) vs. where humans must stay (eligibility,
   consent, sensitive conversations). Keep #27's framing on *AI specifically*
   and #16's on *automation/follow-up workflow*; #27 links to #16 and #26.
+
+- **#28 vs #17 vs #11** — all sit near "clinical research marketing for
+  Sites." #17 is the definitional pillar; #11 is the vendor-evaluation guide
+  (what a Site should look for in a recruitment marketing partner); #28 owns
+  "grow a clinical research site" — how an independent Site builds its Study
+  pipeline, positioning, capacity and growth systems. Keep #28's framing on
+  *Site growth as an operating system* and avoid re-explaining the
+  definition (#17) or vendor selection (#11); #28 links to both.
 
 Two pairs look like duplicates at a glance but are a deliberate
 pillar+deep-dive relationship, not cannibalization: **#6 → #23** (Spanish
@@ -217,6 +227,13 @@ already exist on the homepage.
 
 **Medium priority** (extends an existing cluster):
 - "How to Reduce Screen Failures in Recruitment Campaigns" (extends Cluster B)
+- Follow-ups to Article 28 (new Cluster H), named in its brief as future
+  related pieces: "Building a Strong Digital Presence for a Research Site,"
+  "Business Development for Clinical Research Sites," "Marketing a Research
+  Site to Sponsors and CROs," "Website Strategy for Research Centers,"
+  "Branding for Clinical Research Organizations," "Building a Scalable
+  Marketing Operation for a Research Site." Cluster H is currently a single
+  article, so these are the natural next additions.
 - Follow-ups to Article 27 (Cluster D/E), named in its brief as future
   related pieces: "Automated Follow-Up for Incomplete Pre-Screening,"
   "AI-Assisted Trial Matching," "Recruitment Automation for Research Sites,"
