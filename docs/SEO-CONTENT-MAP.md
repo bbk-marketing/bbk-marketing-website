@@ -31,7 +31,7 @@ into a bigger bucket.
 | A | **Clinical Research Marketing Fundamentals & Buyer's Guide** | 1, 4, 11, 17 | Definitional/foundational content + vendor evaluation. Article 17 is the pillar for the bare term "clinical research marketing." |
 | B | **Recruitment Funnel, Referrals & Metrics** | 2, 3, 7, 14, 18, 19, 20 | Largest cluster — funnel mechanics, terminology (lead/referral), KPIs, funnel-building. |
 | C | **Multi-Site Strategy & Site Performance** | 12, 21, 24, 25 | Centralized vs local, geography, Site-level scorecards, budget allocation. |
-| D | **Advertising Channels & Recruitment Technology** | 9, 10, 13, 26 | Meta Ads, video/AI presenter choice, pre-screening tech evolution, recruitment CRM. |
+| D | **Advertising Channels & Recruitment Technology** | 9, 10, 13, 26, 27 | Meta Ads, video/AI presenter choice, pre-screening tech evolution, recruitment CRM, AI in recruitment (where it helps vs. where humans stay essential). |
 | E | **Participant Communication, Experience & Automation** | 8, 15, 16 | Follow-up speed, pre-Site-call experience, human-vs-AI balance. |
 | F | **Bilingual & Localization Strategy** | 6, 23 | Thin (2 articles) but strategically core to BBK's positioning — priority growth area, not a cluster to merge away. |
 | G | **Regulatory / IRB & Recruitment Materials** | 5, 22 | Thin (2 articles) but compliance stakes justify keeping it distinct rather than diluting into general marketing content. |
@@ -68,6 +68,7 @@ Numbering matches original brief numbering (Article No.N), not publish order.
 | 24 | how-to-measure-recruitment-performance-by-research-site | research site recruitment performance | Informational/Decision-support | C |
 | 25 | equal-advertising-budgets-multi-site-clinical-trial-recruitment | multi-site recruitment budget allocation | Informational/Decision-support | C |
 | 26 | crm-for-clinical-trial-recruitment | clinical trial recruitment CRM | Informational/Commercial investigation | D |
+| 27 | ai-in-clinical-trial-participant-recruitment | AI in clinical trial recruitment | Informational/Decision-support | D |
 
 Secondary keywords / semantic terms live in each article's frontmatter
 `tags:` array — that list already functions as the secondary-keyword set and
@@ -88,6 +89,14 @@ brief — never auto-merge):
   argument ("stop measuring by leads alone"); #14 is the comprehensive
   12-KPI framework and should be treated as the de facto metrics pillar for
   future internal linking. Already cross-linked both directions.
+
+- **#27 vs #16 vs #10** — all touch "AI/automation vs. humans" in recruitment.
+  #16 owns the broad automation-vs-human-follow-up angle (Cluster E); #10 owns
+  the video-presenter choice (human vs AI avatar); #27 owns "AI in clinical
+  trial recruitment" as a topic — where AI assists (matching, prioritization,
+  summarization, routing, analytics) vs. where humans must stay (eligibility,
+  consent, sensitive conversations). Keep #27's framing on *AI specifically*
+  and #16's on *automation/follow-up workflow*; #27 links to #16 and #26.
 
 Two pairs look like duplicates at a glance but are a deliberate
 pillar+deep-dive relationship, not cannibalization: **#6 → #23** (Spanish
@@ -208,6 +217,10 @@ already exist on the homepage.
 
 **Medium priority** (extends an existing cluster):
 - "How to Reduce Screen Failures in Recruitment Campaigns" (extends Cluster B)
+- Follow-ups to Article 27 (Cluster D/E), named in its brief as future
+  related pieces: "Automated Follow-Up for Incomplete Pre-Screening,"
+  "AI-Assisted Trial Matching," "Recruitment Automation for Research Sites,"
+  "Technology and the Participant Journey."
 - A Regulatory-cluster article specifically on pre-screening scripts and
   data handling (Cluster G is thin at 2 articles)
 
