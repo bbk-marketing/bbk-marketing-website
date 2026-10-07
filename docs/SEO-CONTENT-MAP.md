@@ -35,7 +35,7 @@ into a bigger bucket.
 | E | **Participant Communication, Experience & Automation** | 8, 15, 16 | Follow-up speed, pre-Site-call experience, human-vs-AI balance. |
 | F | **Bilingual & Localization Strategy** | 6, 23 | Thin (2 articles) but strategically core to BBK's positioning — priority growth area, not a cluster to merge away. |
 | G | **Regulatory / IRB & Recruitment Materials** | 5, 22 | Thin (2 articles) but compliance stakes justify keeping it distinct rather than diluting into general marketing content. |
-| H | **Research Site Growth & Business Development** | 28, 29 | New (2 articles) — the Site-side B2B angle (Sponsor/CRO visibility, positioning, capacity, growth systems, digital presence) as distinct from participant recruitment. Articles 28 and 29 name a combined set of follow-ups and a "Research Site Marketing & Growth" pillar, so this is a planned growth cluster, not a one-off. Maps to the `Business Growth` blog category / `/research-site-marketing` CTA. |
+| H | **Research Site Growth & Business Development** | 28, 29, 30 | New (3 articles) — the Site-side B2B angle (Sponsor/CRO visibility, positioning, differentiation, capacity, growth systems, digital presence) as distinct from participant recruitment. Articles 28–30 name a combined set of follow-ups and a "Research Site Marketing & Growth" pillar, so this is a planned growth cluster, not a one-off. Maps to the `Business Growth` blog category / `/research-site-marketing` CTA. |
 
 ## 2. Keyword Map
 
@@ -72,6 +72,7 @@ Numbering matches original brief numbering (Article No.N), not publish order.
 | 27 | ai-in-clinical-trial-participant-recruitment | AI in clinical trial recruitment | Informational/Decision-support | D |
 | 28 | how-to-grow-an-independent-clinical-research-site | grow a clinical research site | Informational/Commercial investigation/Decision-support | H |
 | 29 | digital-presence-clinical-research-site | clinical research site digital presence | Informational/Commercial investigation/Decision-support | H |
+| 30 | how-clinical-research-sites-can-differentiate-themselves | clinical research site differentiation | Informational/Commercial investigation/Decision-support | H |
 
 Secondary keywords / semantic terms live in each article's frontmatter
 `tags:` array — that list already functions as the secondary-keyword set and
@@ -117,6 +118,17 @@ brief — never auto-merge):
   planned "Website Strategy for Research Centers" article — it would overlap
   heavily with #29 and needs a clearly different angle (or should be folded
   into #29) before it is written.
+
+- **#30 vs #28 vs #29** — all three live in Cluster H and mention Site
+  positioning. #28 is the growth-system overview (pipeline, capacity, three
+  engines); #29 is the website/online-presence deep dive; #30 owns
+  *differentiation and positioning* (what makes a Site chosen over another
+  Site: specialization, investigators, recruitment capability, evidence,
+  positioning statement). Keep #30 on *what to differentiate on and how to
+  prove it* — not on how to build the website (#29) or the overall growth
+  system (#28). The planned "Marketing a Research Site to Sponsors and CROs"
+  and "Branding for Clinical Research Organizations" articles sit close to
+  #30 and need distinct angles before being written.
 
 Two pairs look like duplicates at a glance but are a deliberate
 pillar+deep-dive relationship, not cannibalization: **#6 → #23** (Spanish
@@ -237,15 +249,16 @@ already exist on the homepage.
 
 **Medium priority** (extends an existing cluster):
 - "How to Reduce Screen Failures in Recruitment Campaigns" (extends Cluster B)
-- Follow-ups to Articles 28/29 (Cluster H), named in their briefs as future
+- Follow-ups to Articles 28–30 (Cluster H), named in their briefs as future
   related pieces: "Business Development for Clinical Research Sites,"
-  "Marketing a Research Site to Sponsors and CROs," "Website Strategy for
-  Research Centers" (overlaps #29 — see Cannibalization Watch),
-  "Branding for Clinical Research Organizations," "Building a Scalable
-  Marketing Operation for a Research Site," "How Research Sites Can
-  Differentiate Themselves." ("Building a Strong Digital Presence for a
-  Research Site" was delivered as Article 29.) Cluster H has 2 articles, so
-  these are the natural next additions.
+  "Marketing a Research Site to Sponsors and CROs" (close to #30 — see
+  Cannibalization Watch), "Website Strategy for Research Centers" (overlaps
+  #29), "Branding for Clinical Research Organizations" (close to #30),
+  "Building a Scalable Marketing Operation for a Research Site."
+  ("Building a Strong Digital Presence for a Research Site" was delivered as
+  Article 29, and "How Research Sites Can Differentiate Themselves" as
+  Article 30.) Cluster H has 3 articles, so these are the natural next
+  additions.
 - Follow-ups to Article 27 (Cluster D/E), named in its brief as future
   related pieces: "Automated Follow-Up for Incomplete Pre-Screening,"
   "AI-Assisted Trial Matching," "Recruitment Automation for Research Sites,"
