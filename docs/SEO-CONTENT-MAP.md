@@ -35,7 +35,7 @@ into a bigger bucket.
 | E | **Participant Communication, Experience & Automation** | 8, 15, 16 | Follow-up speed, pre-Site-call experience, human-vs-AI balance. |
 | F | **Bilingual & Localization Strategy** | 6, 23 | Thin (2 articles) but strategically core to BBK's positioning — priority growth area, not a cluster to merge away. |
 | G | **Regulatory / IRB & Recruitment Materials** | 5, 22 | Thin (2 articles) but compliance stakes justify keeping it distinct rather than diluting into general marketing content. |
-| H | **Research Site Growth & Business Development** | 28, 29, 30, 31, 32, 33, 34, 35, 36 | New (9 articles) — the Site-side B2B angle (Sponsor/CRO visibility, positioning, differentiation, business-development pipeline, B2B marketing assets, the capabilities deck, feasibility, what Sponsors evaluate at selection, what makes a Site high-performing, capacity, growth systems, digital presence) as distinct from participant recruitment. Articles 28–36 name a combined set of follow-ups and a "Research Site Marketing & Growth" pillar, so this is a planned growth cluster, not a one-off. Maps to the `Business Growth` blog category / `/research-site-marketing` CTA. |
+| H | **Research Site Growth & Business Development** | 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 | New (10 articles) — the Site-side B2B angle (Sponsor/CRO visibility, positioning, differentiation, business-development pipeline, B2B marketing assets, the capabilities deck, feasibility, what Sponsors evaluate at selection, what makes a Site high-performing, Site readiness, capacity, growth systems, digital presence) as distinct from participant recruitment. Articles 28–37 name a combined set of follow-ups and a "Research Site Marketing & Growth" pillar, so this is a planned growth cluster, not a one-off. Maps to the `Business Growth` blog category / `/research-site-marketing` CTA. |
 
 ## 2. Keyword Map
 
@@ -79,6 +79,7 @@ Numbering matches original brief numbering (Article No.N), not publish order.
 | 34 | feasibility-strategy-independent-research-sites | clinical research site feasibility strategy | Informational/Commercial investigation/Decision-support | H |
 | 35 | what-sponsors-cros-look-for-in-research-sites | what sponsors look for in clinical research sites | Informational/Commercial investigation/Decision-support | H |
 | 36 | what-makes-a-high-performing-clinical-research-site | high-performing clinical research site | Informational/Decision-support/Commercial investigation | H |
+| 37 | clinical-trial-site-readiness | clinical trial site readiness | Informational/Decision-support/Commercial investigation | H |
 
 Secondary keywords / semantic terms live in each article's frontmatter
 `tags:` array — that list already functions as the secondary-keyword set and
@@ -220,6 +221,19 @@ brief — never auto-merge):
   "How to Build a Site Performance Scorecard" articles overlap #36 heavily
   (sections 14–18) and should be folded into it unless they go much deeper.
 
+- **#37 vs #36 vs #35 vs #34** — #37 is the *preparation* article and the
+  natural owner of "site readiness": it is built on the six-domain readiness
+  framework (J Clin Transl Sci 2023), which #35 mentions in two sentences and
+  #36 touches in one section ("Site Readiness"). Keep #37 as the only article
+  that walks the six domains in depth; #35 (selection criteria) and #36
+  (execution and performance) should link to it rather than re-explain the
+  domains. #37 overlaps #34 on feasibility readiness and #31/#33 on the
+  site profile — it links to #34 and does not restate it. The planned
+  "Study Startup Readiness for Research Sites" article overlaps the
+  startup/study-management sections of #37 and should be folded in, and
+  "Research Site Operational Excellence" now overlaps #36 *and* #37 —
+  drop it or merge it into one of them.
+
 Two pairs look like duplicates at a glance but are a deliberate
 pillar+deep-dive relationship, not cannibalization: **#6 → #23** (Spanish
 localization → translation-vs-localization workflow deep dive) and
@@ -347,21 +361,25 @@ already exist on the homepage.
   Improve CRO Relationships" (close to #31), "How to Present Recruitment
   Capabilities to Sponsors" (close to #33 slide 6), "How to Build Better
   Enrollment Forecasts" and "How to Track Feasibility Conversion" (both
-  sections of #34), "Site Readiness for Clinical Trials" (close to #35/#36 —
-  the readiness domains are already covered in #35 and section 15 of #36),
-  "Research Site Operational Excellence" and "How to Build a Site
-  Performance Scorecard" (both overlap #36 — see Cannibalization Watch),
+  sections of #34), "Research Site Operational Excellence" (overlaps #36
+  and #37) and "How to Build a Site Performance Scorecard" (overlaps #36),
+  "Study Startup Readiness for Research Sites" (overlaps #37),
   "Sponsor-Site Communication Best Practices" (close to the communication
-  sections of #32/#35/#36). Already delivered: "Building a Strong Digital
-  Presence for a Research Site" (#29), "How Research Sites Can
-  Differentiate Themselves" (#30), "Business Development for Clinical
-  Research Sites" (#31), "Marketing a Research Site to Sponsors and CROs"
-  (#32), "How to Create a Clinical Research Site Capabilities Deck" (#33),
-  "Feasibility Strategy for Independent Research Sites" (#34), "What
-  Sponsors Look for in Research Sites" (#35), "What Makes a High-Performing
-  Clinical Research Site?" (#36). Cluster H has 9 articles and heavy
-  internal overlap; any further additions should add real depth, not
-  repeat these.
+  sections of #32/#35/#36/#37), "How to Prepare for a Sponsor Site
+  Qualification Visit" (the one genuinely distinct item — only touched in
+  #35 section 27 and #37). See Cannibalization Watch. Already delivered:
+  "Building a Strong Digital Presence for a Research Site" (#29), "How
+  Research Sites Can Differentiate Themselves" (#30), "Business Development
+  for Clinical Research Sites" (#31), "Marketing a Research Site to Sponsors
+  and CROs" (#32), "How to Create a Clinical Research Site Capabilities
+  Deck" (#33), "Feasibility Strategy for Independent Research Sites" (#34),
+  "What Sponsors Look for in Research Sites" (#35), "What Makes a
+  High-Performing Clinical Research Site?" (#36), "Site Readiness for
+  Clinical Trials" (#37). Cluster H has 10 articles and heavy internal
+  overlap; the high-priority gaps in other clusters (bilingual/localization
+  — Cluster F, "Cost Per Referral vs Cost Per Lead" — Cluster B) have been
+  waiting since the 2026-09-13 audit and should take priority over further
+  Cluster H additions.
 - Follow-ups to Article 27 (Cluster D/E), named in its brief as future
   related pieces: "Automated Follow-Up for Incomplete Pre-Screening,"
   "AI-Assisted Trial Matching," "Recruitment Automation for Research Sites,"
