@@ -35,7 +35,7 @@ into a bigger bucket.
 | E | **Participant Communication, Experience & Automation** | 8, 15, 16 | Follow-up speed, pre-Site-call experience, human-vs-AI balance. |
 | F | **Bilingual & Localization Strategy** | 6, 23 | Thin (2 articles) but strategically core to BBK's positioning — priority growth area, not a cluster to merge away. |
 | G | **Regulatory / IRB & Recruitment Materials** | 5, 22 | Thin (2 articles) but compliance stakes justify keeping it distinct rather than diluting into general marketing content. |
-| H | **Research Site Growth & Business Development** | 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 | New (11 articles) — the Site-side B2B angle (Sponsor/CRO visibility, positioning, differentiation, business-development pipeline, B2B marketing assets, the capabilities deck, feasibility, what Sponsors evaluate at selection, what makes a Site high-performing, Site readiness, Sponsor-Site communication, capacity, growth systems, digital presence) as distinct from participant recruitment. Articles 28–38 name a combined set of follow-ups and a "Research Site Marketing & Growth" pillar, so this is a planned growth cluster, not a one-off. Maps to the `Business Growth` blog category / `/research-site-marketing` CTA. |
+| H | **Research Site Growth & Business Development** | 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39 | New (12 articles) — the Site-side B2B angle (Sponsor/CRO visibility, positioning, differentiation, business-development pipeline, B2B marketing assets, the capabilities deck, feasibility, what Sponsors evaluate at selection, what makes a Site high-performing, Site readiness, Sponsor-Site communication, becoming a preferred Site, capacity, growth systems, digital presence) as distinct from participant recruitment. Articles 28–39 name a combined set of follow-ups and a "Research Site Marketing & Growth" pillar, so this is a planned growth cluster, not a one-off. Maps to the `Business Growth` blog category / `/research-site-marketing` CTA. |
 
 ## 2. Keyword Map
 
@@ -81,6 +81,7 @@ Numbering matches original brief numbering (Article No.N), not publish order.
 | 36 | what-makes-a-high-performing-clinical-research-site | high-performing clinical research site | Informational/Decision-support/Commercial investigation | H |
 | 37 | clinical-trial-site-readiness | clinical trial site readiness | Informational/Decision-support/Commercial investigation | H |
 | 38 | sponsor-site-communication-best-practices | Sponsor Site communication | Informational/Decision-support/Commercial investigation | H |
+| 39 | how-to-become-a-preferred-research-site | preferred clinical research site | Informational/Commercial investigation/Decision-support | H |
 
 Secondary keywords / semantic terms live in each article's frontmatter
 `tags:` array — that list already functions as the secondary-keyword set and
@@ -251,6 +252,23 @@ brief — never auto-merge):
   CRO Relationships" and "How to Become a Preferred Research Site" now sit
   inside #31/#35/#36/#38 combined and would be near-duplicates.
 
+- **#39 vs #31 / #35 / #36 / #38** — #39 ("preferred Research Site") is the
+  *repeat-business* article and the capstone of the Cluster H chain: it
+  reuses the practices from #31 (business development), #35 (selection),
+  #36 (performance) and #38 (communication) but frames them around *earning
+  repeat invitations* and the preferred-site flywheel, anchored in the 2026
+  *J Clin Transl Sci* sponsor-site review (stable sponsor base → faster
+  feasibility, pre-negotiated contract terms, programmatic resourcing,
+  sponsor trust, site sustainability). It must link to those four rather
+  than restate them, and it is the owner of "preferred site / repeat
+  business". The planned "Building Repeat Business With Clinical Trial
+  Sponsors," "What Makes Sponsors Return to the Same Research Site?" and
+  "How Research Sites Can Improve CRO Relationships" articles are all
+  subsumed by #39 and should NOT be written. Note: #32 and #35 reference a
+  "2026 review of Sponsor-Site interactions" that was not identified when
+  they were written; it is the review cited in #39 (J Clin Transl Sci 2026,
+  PMC13184653) and could be added to their communication sections.
+
 Two pairs look like duplicates at a glance but are a deliberate
 pillar+deep-dive relationship, not cannibalization: **#6 → #23** (Spanish
 localization → translation-vs-localization workflow deep dive) and
@@ -370,13 +388,14 @@ already exist on the homepage.
 
 **Medium priority** (extends an existing cluster):
 - "How to Reduce Screen Failures in Recruitment Campaigns" (extends Cluster B)
-- Follow-ups to Articles 28–38 (Cluster H), named in their briefs as future
+- Follow-ups to Articles 28–39 (Cluster H), named in their briefs as future
   related pieces: "Website Strategy for Research Centers" (overlaps #29),
   "Branding for Clinical Research Organizations" (close to #30), "Building a
   Scalable Marketing Operation for a Research Site," "Building a Study
   Pipeline for a Research Site" (overlaps #31), "How Research Sites Can
-  Improve CRO Relationships" and "How to Become a Preferred Research Site"
-  (both now covered across #31/#35/#36/#38 — near-duplicates), "How to
+  Improve CRO Relationships," "Building Repeat Business With Clinical Trial
+  Sponsors" and "What Makes Sponsors Return to the Same Research Site?"
+  (all subsumed by #39 — do not write), "How to
   Present Recruitment Capabilities to Sponsors" (close to #33 slide 6),
   "How to Build Better Enrollment Forecasts" and "How to Track Feasibility
   Conversion" (both sections of #34), "Research Site Operational
@@ -393,7 +412,8 @@ already exist on the homepage.
   "Feasibility Strategy for Independent Research Sites" (#34), "What
   Sponsors Look for in Research Sites" (#35), "What Makes a High-Performing
   Clinical Research Site?" (#36), "Site Readiness for Clinical Trials"
-  (#37), "Sponsor-Site Communication Best Practices" (#38). Cluster H has 11
+  (#37), "Sponsor-Site Communication Best Practices" (#38), "How to Become
+  a Preferred Research Site for Sponsors and CROs" (#39). Cluster H has 12
   articles and heavy internal overlap; the high-priority gaps in other
   clusters (bilingual/localization — Cluster F, "Cost Per Referral vs Cost
   Per Lead" — Cluster B) have been waiting since the 2026-09-13 audit and
