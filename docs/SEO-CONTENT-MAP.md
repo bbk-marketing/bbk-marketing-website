@@ -35,7 +35,7 @@ into a bigger bucket.
 | E | **Participant Communication, Experience & Automation** | 8, 15, 16 | Follow-up speed, pre-Site-call experience, human-vs-AI balance. |
 | F | **Bilingual & Localization Strategy** | 6, 23 | Thin (2 articles) but strategically core to BBK's positioning — priority growth area, not a cluster to merge away. |
 | G | **Regulatory / IRB & Recruitment Materials** | 5, 22 | Thin (2 articles) but compliance stakes justify keeping it distinct rather than diluting into general marketing content. |
-| H | **Research Site Growth & Business Development** | 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39 | New (12 articles) — the Site-side B2B angle (Sponsor/CRO visibility, positioning, differentiation, business-development pipeline, B2B marketing assets, the capabilities deck, feasibility, what Sponsors evaluate at selection, what makes a Site high-performing, Site readiness, Sponsor-Site communication, becoming a preferred Site, capacity, growth systems, digital presence) as distinct from participant recruitment. Articles 28–39 name a combined set of follow-ups and a "Research Site Marketing & Growth" pillar, so this is a planned growth cluster, not a one-off. Maps to the `Business Growth` blog category / `/research-site-marketing` CTA. |
+| H | **Research Site Growth & Business Development** | 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40 | New (13 articles) — the Site-side B2B angle (Sponsor/CRO visibility, positioning, differentiation, business-development pipeline, B2B marketing assets, the capabilities deck, feasibility, what Sponsors evaluate at selection, what makes a Site high-performing, Site readiness, Sponsor-Site communication, becoming a preferred Site, CRO relationships, capacity, growth systems, digital presence) as distinct from participant recruitment. Articles 28–40 name a combined set of follow-ups and a "Research Site Marketing & Growth" pillar, so this is a planned growth cluster, not a one-off. Maps to the `Business Growth` blog category / `/research-site-marketing` CTA. |
 
 ## 2. Keyword Map
 
@@ -82,6 +82,7 @@ Numbering matches original brief numbering (Article No.N), not publish order.
 | 37 | clinical-trial-site-readiness | clinical trial site readiness | Informational/Decision-support/Commercial investigation | H |
 | 38 | sponsor-site-communication-best-practices | Sponsor Site communication | Informational/Decision-support/Commercial investigation | H |
 | 39 | how-to-become-a-preferred-research-site | preferred clinical research site | Informational/Commercial investigation/Decision-support | H |
+| 40 | how-research-sites-can-improve-cro-relationships | improve CRO relationships research sites | Informational/Commercial investigation/Decision-support | H |
 
 Secondary keywords / semantic terms live in each article's frontmatter
 `tags:` array — that list already functions as the secondary-keyword set and
@@ -269,6 +270,27 @@ brief — never auto-merge):
   they were written; it is the review cited in #39 (J Clin Transl Sci 2026,
   PMC13184653) and could be added to their communication sections.
 
+- **#40 vs #38 vs #39 vs #31 (HIGH RISK)** — #40 ("How Research Sites Can
+  Improve CRO Relationships") overlaps #38 (acknowledge/own/escalate, contact
+  matrix, monitoring, recruitment reporting, avoid blaming vendors, document
+  decisions, channels) and #39 (realistic feasibility, monitoring findings,
+  institutional memory, feedback, repeat business, scorecard) on well over
+  half of its sections; it was previously flagged here as a near-duplicate
+  of #31/#35/#36/#38/#39 and was written at the editor's request. Its
+  CRO-specific material is the part to protect: CRA/monitor relationship,
+  CRO pressure and multi-vendor ownership, boundaries on unfunded work,
+  payment and contract hygiene, the sponsor/site perception gap (Advarra
+  survey via ACRP 2025: only 31% of site respondents call CRO interactions
+  collaborative), and a CRO-relationship scorecard. Roles: #38 owns
+  *day-to-day communication practice*, #39 owns *repeat business /
+  preferred status*, #40 owns *the CRO as a counterparty*. Cross-link all
+  four; do not publish any further article on CRO relationships,
+  Sponsor-Site communication, or repeat business — "CRO Relationship
+  Management for Research Sites," "Building Repeat Business With Clinical
+  Trial Sponsors" and "What Makes Sponsors Return to the Same Site?" are
+  all fully covered now. Consider consolidating or retitling around the
+  CRO-specific angle if rankings show #38/#39/#40 competing.
+
 Two pairs look like duplicates at a glance but are a deliberate
 pillar+deep-dive relationship, not cannibalization: **#6 → #23** (Spanish
 localization → translation-vs-localization workflow deep dive) and
@@ -388,14 +410,14 @@ already exist on the homepage.
 
 **Medium priority** (extends an existing cluster):
 - "How to Reduce Screen Failures in Recruitment Campaigns" (extends Cluster B)
-- Follow-ups to Articles 28–39 (Cluster H), named in their briefs as future
+- Follow-ups to Articles 28–40 (Cluster H), named in their briefs as future
   related pieces: "Website Strategy for Research Centers" (overlaps #29),
   "Branding for Clinical Research Organizations" (close to #30), "Building a
   Scalable Marketing Operation for a Research Site," "Building a Study
-  Pipeline for a Research Site" (overlaps #31), "How Research Sites Can
-  Improve CRO Relationships," "Building Repeat Business With Clinical Trial
-  Sponsors" and "What Makes Sponsors Return to the Same Research Site?"
-  (all subsumed by #39 — do not write), "How to
+  Pipeline for a Research Site" (overlaps #31), "CRO Relationship
+  Management for Research Sites," "Building Repeat Business With Clinical
+  Trial Sponsors" and "What Makes Sponsors Return to the Same (Research)
+  Site?" (all fully covered by #38/#39/#40 — do not write), "How to
   Present Recruitment Capabilities to Sponsors" (close to #33 slide 6),
   "How to Build Better Enrollment Forecasts" and "How to Track Feasibility
   Conversion" (both sections of #34), "Research Site Operational
@@ -413,8 +435,9 @@ already exist on the homepage.
   Sponsors Look for in Research Sites" (#35), "What Makes a High-Performing
   Clinical Research Site?" (#36), "Site Readiness for Clinical Trials"
   (#37), "Sponsor-Site Communication Best Practices" (#38), "How to Become
-  a Preferred Research Site for Sponsors and CROs" (#39). Cluster H has 12
-  articles and heavy internal overlap; the high-priority gaps in other
+  a Preferred Research Site for Sponsors and CROs" (#39), "How Research
+  Sites Can Improve CRO Relationships" (#40). Cluster H has 13 articles and
+  heavy internal overlap; the high-priority gaps in other
   clusters (bilingual/localization — Cluster F, "Cost Per Referral vs Cost
   Per Lead" — Cluster B) have been waiting since the 2026-09-13 audit and
   should take priority over further Cluster H additions.
