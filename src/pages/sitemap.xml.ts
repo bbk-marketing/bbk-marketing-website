@@ -26,6 +26,7 @@ export const GET: APIRoute = async () => {
     { loc: '/privacy-policy', changefreq: 'yearly', priority: '0.3' },
     { loc: '/data-protection', changefreq: 'yearly', priority: '0.3' },
     { loc: '/cookie-policy', changefreq: 'yearly', priority: '0.3' },
+    { loc: '/ai-transparency', changefreq: 'yearly', priority: '0.3' },
   ];
 
   const postUrls: SitemapUrl[] = posts.map((post) => ({
